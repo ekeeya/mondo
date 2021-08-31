@@ -1,0 +1,43 @@
+# General
+.DS_Store
+.idea
+.ipynb_checkpoints
+*.pyc
+*~
+.envrc
+.direnv
+.commit
+
+node_modules
+sitestatic
+
+# Distribution / packaging
+.Python
+env/
+venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+*.sublime*
+
+# VS Code projects
+.vscode/
+
+# autoenv
+.direnv/

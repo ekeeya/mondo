@@ -1,0 +1,60 @@
+-load static
+%footer.footer.pt-6.pb-5.bg-primary.text-white
+  .container
+    .row
+      .col-md-4
+        %img.navbar-brand-dark.mb-4{:alt => "Logo light", :height => "35", :src => "{% static 'landing/assets/img/brand/light.svg' %}"}/
+        %p
+          Mondo is an open source project that offers easy managment of USSD application by allowing
+          non-technical personel create and midify USSD menus using intuitive highly flexible flows.
+        %ul.social-buttons.mb-5.mb-lg-0
+          %li
+            %a.icon-white.me-2{:aria-label => "twitter social link", :href => "https://twitter.com/themesberg"}
+              %span.fab.fa-twitter
+          %li
+            %a.icon-white.me-2{:aria-label => "facebook social link", :href => "https://www.facebook.com/themesberg/"}
+              %span.fab.fa-facebook
+          %li
+            %a.icon-white.me-2{:aria-label => "github social link", :href => "https://github.com/themesberg"}
+              %span.fab.fa-github
+          %li
+            %a.icon-white{:aria-label => "dribbble social link", :href => "https://dribbble.com/themesberg"}
+              %span.fab.fa-dribbble
+      .col-6.col-md-2.mb-5.mb-lg-0
+        %span.h5 Features
+        %ul.footer-links.mt-2
+          %li
+            %a{:href => "#", :target => "_blank"} Easy USSD Menus
+          %li
+            %a{:href => "#", :target => "_blank"} Personalized Menus
+          %li
+            %a{:href => "#", :target => "_blank"} License
+          %li
+            %a{:href => "#", :target => "_blank"} Support
+      .col-12.col-md-4.mb-5.mb-lg-0
+        %span.h5 Subscribe
+        %p.text-muted.font-small.mt-2
+          Join our mailing list. We occasionally send mondo system
+          update notifications.
+        %form{:action => "#"}
+          .form-row.mb-2
+            .col-12
+              %label.h6.fw-normal.text-muted.d-none{:for => "exampleInputEmail3"}
+                Email
+                address
+              %input#exampleInputEmail3.form-control.mb-2{:aria-label => "Subscribe form", :name => "email", :placeholder => "example@company.com", :required => "", :type => "email"}/
+            .col-12.d-grid
+              %button.btn.btn-tertiary{:data-loading-text => "Sending", :type => "submit"}
+                %span Subscribe
+        %p.text-muted.font-small.m-0
+          We’ll never share your details. See our
+          %a.text-white{:href => "#"}
+            Privacy
+            Policy
+    %hr.bg-secondary.my-3.my-lg-5/
+    .row
+      .col.mb-md-0
+        .d-flex.text-center.justify-content-center.align-items-center{:role => "contentinfo"}
+          %p.fw-normal.font-small.mb-0
+            Copyright © Digital Solutions
+              %span.current-year 2021

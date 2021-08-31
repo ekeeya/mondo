@@ -1,0 +1,252 @@
+-extends 'landing/base.html'
+-load static
+-block header
+  -include 'landing/header.haml'
+-block footer
+  -include 'landing/footer.haml'
+-block main
+  %main
+    .preloader.bg-dark.flex-column.justify-content-center.align-items-center
+      %svg#loader-logo{height: "50", viewbox: "0 0 64 78.4", width: "50", xmlns: "http://www.w3.org/2000/svg"}
+        %path{d: "M10,0h1.2V11.2H0V10A10,10,0,0,1,10,0Z", fill: "#fff"}
+        %rect{fill: "none", height: "25.6", stroke: "#fff", :stroke-width => "11.2", width: "0", x: "40", y: "17.6"}
+        %rect{fill: "none", height: "25.6", stroke: "#fff", :stroke-opacity => "0.4", :stroke-width => "11.2", width: "0", x: "23", y: "35.2"}
+        %path{d: "M52.8,35.2H64V53.8a7,7,0,0,1-7,7H52.8V35.2Z", fill: "#fff"}
+        %rect{fill: "none", height: "25.6", stroke: "#fff", :stroke-width => "11.2", width: "0", x: "6", y: "52.8"}
+        %path{d: "M52.8,0H57a7,7,0,0,1,7,7h0v4.2H52.8V0Z", fill: "#fff"}
+        %rect{fill: "none", height: "11.2", stroke: "#fff", :stroke-width => "11.2", width: "0", x: "57.8", y: "17.6"}
+        %rect{fill: "none", height: "11.2", stroke: "#fff", :stroke-width => "11.2", width: "0", x: "6", y: "35.2"}
+        %rect{fill: "none", height: "11.2", stroke: "#fff", :stroke-width => "11.2", width: "0", x: "40.2", y: "49.6"}
+        %path{d: "M17.6,67.2H28.8v1.2a10,10,0,0,1-10,10H17.6V67.2Z", fill: "#fff"}
+        %rect{fill: "none", height: "11.2", stroke: "#fff", :stroke-opacity => "0.4", :stroke-width => "28.8", width: "0", x: "31.6"}
+        %rect{fill: "none", height: "11.2", stroke: "#fff", :stroke-width => "28.8", width: "0", x: "14", y: "17.6"}
+    %section.section-header.overflow-hidden.pt-7.pt-lg-8.pb-9.pb-lg-12.bg-primary.text-white
+      .container
+        .row
+          .col-12.text-center
+            .bootstrap-big-icon.d-none.d-lg-block
+              %svg.d-block.my-1{height: "622", role: "img", viewbox: "0 0 118 94", width: "700", xmlns: "http://www.w3.org/2000/svg"}
+                %title mondo
+                %path{:clip-rule => "evenodd", d: "M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z", fill: "currentColor", :fill-rule => "evenodd"}
+            %h1.fw-bolder.display-2 Mondo
+            %h2.lead.fw-normal.text-muted.mb-4.px-lg-10
+              Create hundreds of USSD applications with just a single setup.
+              %br/
+              As if this wasn't enough, send your clients Personalized SMSs and boost your customer
+              engagment.
+            / Button Modal
+            .d-flex.justify-content-center.align-items-center.mb-5
+              %a.btn.btn-tertiary.mb-3.mt-2.me-2.me-md-3.animate-up-2{href: "#components"}
+                %span.fas.fa-th-large.me-2
+                %span.d-none.d-md-inline
+                  Explore
+                  Features
+                %span.d-md-none Features
+              %a.github-button{:aria-label => "Star themesberg/pixel-bootstrap-ui-kit on GitHub", :data-color-scheme => "no-preference: dark; light: light; dark: light;", :data-icon => "octicon-star", :data-show-count => "true", :data-size => "large", href: "https://github.com/themesberg/pixel-bootstrap-ui-kit"} Star
+            .d-flex.justify-content-center.flex-column.mb-6.mb-lg-5
+              %a.d-block.text-center.mx-auto{href: "https://themesberg.com", target: "_blank"}
+                %img.d-block.mx-auto.mb-3{alt: "Themesberg Logo", height: "25", src: "{% static 'landing/assets/img/themesberg.svg' %}", width: "25"}/
+                %span.text-muted.font-small
+                  Software written by
+                  %a{href: "https://github.com/ekeeya", target: "_blank"} Keeya Emmanuel
+      %figure.position-absolute.bottom-0.left-0.w-100.d-none.d-md-block.mb-n2
+        %svg.fill-white{viewbox: "0 0 3000 185.4", xmlns: "http://www.w3.org/2000/svg"}
+          %path{d: "M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"}
+    .section.py-0
+      .container.mt-n10.mt-lg-n12.z-2
+        .row.justify-content-center
+          .col-12.col-md-10
+            %img{alt: "Pixel Free Mockup", src: "{% static 'landing/assets/img/presentation-mockup.png' %}"}/
+    %section.section.section-lg
+      .container
+        .row.justify-content-between.align-items-center.mb-5.mb-lg-7
+          .col-12.col-lg-5.mb-5.mb-lg-0.order-lg-2
+            %h2.h1 Bootstrap 5
+            %p.mb-4.lead.fw-bold Latest version of Bootstrap without jQuery
+            %p.mb-4
+              Pixel is built using the latest version of Bootstrap 5 and we only used Vanilla
+              Javascript for everything including the plugins
+            %a.btn.btn-outline-primary{href: "https://themesberg.com/docs/pixel-bootstrap/components/accordions/", target: "_blank"}
+              %span.fas.fa-book.me-2
+              Getting started
+          .col-12.col-lg-6.order-lg-1
+            %img{alt: "Front pages overview", src: "{% static 'landing/assets/img/illustrations/bs5-illustrations.svg' %}"}/
+        .row.justify-content-between.align-items-center.mb-5.mb-lg-7
+          .col-lg-5.mb-5.mb-lg-0
+            %h2.h1.d-flex.align-items-center
+              Modular sections
+              %span.badge-md.ms-3.mb-0.fs-6.badge.rounded-pill.text-white.bg-tertiary Pro
+            %p.mb-4.lead.fw-bold More than 50 website sections
+            %p.mb-4
+              Using the sections in Pixel Pro you can easily build new pages by adding them
+              together
+            %a.btn.btn-primary.mt-2.animate-up-2{href: "https://demo.themesberg.com/pixel-pro/v5/html/sections/all-sections.html", target: "_blank"}
+              %span.fas.fa-th-large.me-2
+              Explore sections
+          .col-lg-6
+            %img{alt: "MapBox Leaflet.js Custom Integration Mockup", src: "{% static 'landing/assets/img/sections-mockup.jpg' %}"}/
+        .row.justify-content-between.align-items-center
+          .col-12.col-lg-5.order-lg-2.mb-5.mb-lg-0
+            %h2.h1.d-flex.align-items-center
+              User Dashboard
+              %span.badge-md.ms-3.mb-0.fs-6.badge.rounded-pill.text-white.bg-tertiary Pro
+            %p.mb-4.lead.fw-bold 9 dashboard pages
+            %p.mb-4
+              Quickly set up a user settings panel with the advanced dashboard pages including
+              billing, settings, messaging
+            %a.btn.btn-tertiary.animate-up-2{href: "https://demo.themesberg.com/pixel-pro/v5/html/dashboard/account.html", target: "_blank"}
+              %span.fas.fa-chart-line.me-2
+              Explore
+              dashboard
+          .col-12.col-lg-6.order-lg-1
+            %img{alt: "Dashboard Preview", src: "{% static 'landing/assets/img/presentation-mockup-dashboard.png' %}"}/
+    .section.section-sm.pb-0.mb-n4
+      .container
+        .row.justify-content-center
+          %h3.text-center Pricing
+    .section.section-md
+      .container
+        .row.mb-5
+          .col-12.col-md-6.col-lg-4.mb-5.mb-lg-0
+            .card.shadow.text-center
+              .card-header.bg-white.p-3
+                %h3.text-primary.mb-4 Free
+                %span.d-block
+                  %span.display-1.text-dark.fw-bold
+                    %span.align-top.font-medium> $
+                    19
+                  %span.d-block.text-gray.font-small / month
+              .card-body
+                %ul.list-unstyled.mb-4
+                  %li.list-item.pb-3
+                    %strong 1
+                    free domain
+                  %li.list-item.pb-3
+                    Storage space:
+                    %strong 5GB
+                  %li.list-item.pb-3
+                    %strong 100k
+                    monthly visitors
+                  %li.list-item.pb-3 One-click staging site
+                  %li.list-item.pb-3 Search engine wizard
+                  %li.list-item.pb-3 Community support
+                .d-grid
+                  %a.btn.btn-primary.animate-up-1{href: "#"} Purchase now
+          .col-12.col-md-6.col-lg-4.mb-5.mb-lg-0
+            .card.shadow
+              .card-header.bg-white.p-3.text-center
+                %h3.text-primary.mb-4 Basic
+                %span.d-block
+                  %span.display-1.text-dark.fw-bold
+                    %span.align-top.font-medium> $
+                    19
+                  %span.d-block.text-gray.font-small / month
+              .card-body
+                %ul.list-group.list-group-flush.price-list
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %strong 80
+                    Components
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %strong 6
+                    Example Pages
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Uncoventional cards
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Timelines
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    E-commerce
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Charts
+                  %li.list-group-item.bg-white.border-0.ps-0.pb-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Premium
+                    Support
+                .d-grid
+                  %a.btn.btn-primary.animate-up-1{href: "#"} Purchase now
+              / End Content
+          .col-12.col-md-6.col-lg-4.mb-5.mb-lg-0
+            .card.shadow
+              / Header
+              .card-header.bg-white.p-3.text-center
+                %h3.text-primary.mb-4 Premium
+                %span.d-block
+                  %span.display-1.text-dark.fw-bold
+                    %span.align-top.font-medium> $
+                    19
+                  %span.d-block.text-gray.font-small / month
+              / End Header
+              / Content
+              .card-body
+                %ul.list-group.list-group-flush.price-list
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %strong 1000+
+                    Components
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %strong 35
+                    Example Pages
+                  %li.list-group-item.bg-white.border-0.ps-0 Dashboard included
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Uncoventional cards
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Timelines
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    E-commerce
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Premium charts
+                  %li.list-group-item.bg-white.border-0.border-0.ps-0.pb-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Premium
+                    Support
+                .d-grid
+                  %a.btn.btn-primary.animate-up-1{href: "#"} Purchase now
+            / End Content
+          .col-12.mt-5
+            .card.shadow.mb-6
+              .card-body.px-5.py-5.text-center.text-md-left
+                .row.align-items-center
+                  .col-md-6
+                    %h2.mb-3 Get in touch
+                    %p.mb-0
+                      If you need any help with our products or services, choose one of the
+                      following ways
+                      to contact us.
+                  .col-12.col-md-6.mt-4.mt-md-0.text-md-right
+                    %a.btn.btn-primary{href: "#"}
+                      %span.me-1
+                        %span.fas.fa-headphones
+                      Contact Us
+    %section#download.section.section-lg.bg-white
+      .container
+        .row
+          .col-12.col-lg-8
+            %h2.h1.font-weight-light.mb-3
+              %strong Open source
+            %p.lead.mb-4
+              Mondo is an open source project that offers easy managment of USSD
+              application by allowing non-technical personel create and midify USSD menus using intuitive
+              highly flexible flows.
+            %p.lead.mb-4 Mondo also allows you send highly customized SMSs using uploaded Lists.
+            .d-flex.align-items-center
+              %a.btn.btn-github.me-4.animate-up-2{href: "https://github.com/themesberg/pixel-bootstrap-ui-kit", target: "_blank"}
+                View on GitHub
+              .mt-2
+                %a.github-button{:aria-label => "Star themesberg/pixel-bootstrap-ui-kit on GitHub", :data-color-scheme => "no-preference: dark; light: light; dark: light;", :data-icon => "octicon-star", :data-show-count => "true", :data-size => "large", href: "https://github.com/themesberg/pixel-bootstrap-ui-kit"} Star
+

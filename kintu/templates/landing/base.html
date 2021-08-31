@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Mondo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Mondo">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'landing/assets/img/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'landing/assets/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'landing/assets/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'landing/assets/img/favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'landing/assets/img/favicon/safari-pinned-tab.svg' %}" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link type="text/css" href="{% static 'landing/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
+          rel="stylesheet">
+    <link type="text/css" href="{% static 'landing/css/pixel.css' %}" rel="stylesheet">
+</head>
+
+<body>
+{% block header %}
+{% endblock header %}
+{% block main %}
+{% endblock main %}
+{% block footer %}
+{% endblock footer %}
+<script src="{% static 'landing/vendor/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'landing/vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'landing/vendor/headroom.js/dist/headroom.min.js' %}"></script>
+<script src="{% static 'landing/vendor/onscreen/dist/on-screen.umd.min.js' %}"></script>
+<script src="{% static 'landing/vendor/jarallax/dist/jarallax.min.js' %}"></script>
+<script src="{% static 'landing/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+<script src="{% static 'landing/vendor/vivus/dist/vivus.min.js' %}"></script>
+<script src="{% static 'landing/vendor/vanillajs-datepicker/dist/js/datepicker.min.js' %}"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="{% static 'landing/assets/js/pixel.js' %}"></script>
+</body>
+</html>
