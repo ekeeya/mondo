@@ -10,7 +10,7 @@
 
 node_modules
 sitestatic
-
+staticfiles
 # Distribution / packaging
 .Python
 env/
