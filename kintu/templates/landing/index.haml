@@ -25,16 +25,13 @@
         .row
           .col-12.text-center
             .bootstrap-big-icon.d-none.d-lg-block
-              %svg.d-block.my-1{height: "622", role: "img", viewbox: "0 0 118 94", width: "700", xmlns: "http://www.w3.org/2000/svg"}
-                %title mondo
-                %path{:clip-rule => "evenodd", d: "M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z", fill: "currentColor", :fill-rule => "evenodd"}
+              %img{alt: "Mondo mockup", src: "{% static 'landing/assets/img/social-com.png' %}"}/
             %h1.fw-bolder.display-2 Mondo
             %h2.lead.fw-normal.text-muted.mb-4.px-lg-10
               Create hundreds of USSD applications with just a single setup.
               %br/
-              As if this wasn't enough, send your clients Personalized SMSs and boost your customer
-              engagment.
-            / Button Modal
+              As if this wasn't enough, send your clients personalized SMSs and boost your customer
+              engagement.
             .d-flex.justify-content-center.align-items-center.mb-5
               %a.btn.btn-tertiary.mb-3.mt-2.me-2.me-md-3.animate-up-2{href: "#components"}
                 %span.fas.fa-th-large.me-2
@@ -42,10 +39,10 @@
                   Explore
                   Features
                 %span.d-md-none Features
-              %a.github-button{:aria-label => "Star themesberg/pixel-bootstrap-ui-kit on GitHub", :data-color-scheme => "no-preference: dark; light: light; dark: light;", :data-icon => "octicon-star", :data-show-count => "true", :data-size => "large", href: "https://github.com/themesberg/pixel-bootstrap-ui-kit"} Star
+              %a.github-button{:aria-label => "Star ekeeya/mondo on GitHub", :data-color-scheme => "no-preference: dark; light: light; dark: light;", :data-icon => "octicon-star", :data-show-count => "true", :data-size => "large", href: "https://github.com/ekeeya/mondo"} Star
             .d-flex.justify-content-center.flex-column.mb-6.mb-lg-5
-              %a.d-block.text-center.mx-auto{href: "https://themesberg.com", target: "_blank"}
-                %img.d-block.mx-auto.mb-3{alt: "Themesberg Logo", height: "25", src: "{% static 'landing/assets/img/themesberg.svg' %}", width: "25"}/
+              %a.d-block.text-center.mx-auto{href: "mondo.io", target: "_blank"}
+                %img.d-block.mx-auto.mb-3{alt: "Mondo logo", height: "50", src: "{% static 'landing/assets/img/favicon/favicon.png' %}", width: "50"}/
                 %span.text-muted.font-small
                   Software written by
                   %a{href: "https://github.com/ekeeya", target: "_blank"} Keeya Emmanuel
@@ -56,50 +53,43 @@
       .container.mt-n10.mt-lg-n12.z-2
         .row.justify-content-center
           .col-12.col-md-10
-            %img{alt: "Pixel Free Mockup", src: "{% static 'landing/assets/img/presentation-mockup.png' %}"}/
+            %img{alt: "Mondo mockup", src: "{% static 'landing/assets/img/presentation-mockup.png' %}"}/
     %section.section.section-lg
       .container
         .row.justify-content-between.align-items-center.mb-5.mb-lg-7
           .col-12.col-lg-5.mb-5.mb-lg-0.order-lg-2
-            %h2.h1 Bootstrap 5
-            %p.mb-4.lead.fw-bold Latest version of Bootstrap without jQuery
+            %h2.h1 Personalization
+            %p.mb-4.lead.fw-bold Personalized SMS
             %p.mb-4
-              Pixel is built using the latest version of Bootstrap 5 and we only used Vanilla
-              Javascript for everything including the plugins
+              Personalized SMSs promote customer engagment.It is time to increase your open rates to 98% through our highly flexible customized SMS capabilities.
             %a.btn.btn-outline-primary{href: "https://themesberg.com/docs/pixel-bootstrap/components/accordions/", target: "_blank"}
               %span.fas.fa-book.me-2
               Getting started
           .col-12.col-lg-6.order-lg-1
-            %img{alt: "Front pages overview", src: "{% static 'landing/assets/img/illustrations/bs5-illustrations.svg' %}"}/
+            %img{alt: "Front pages overview", src: "{% static 'landing/assets/img/sms.jpg' %}"}/
         .row.justify-content-between.align-items-center.mb-5.mb-lg-7
           .col-lg-5.mb-5.mb-lg-0
             %h2.h1.d-flex.align-items-center
-              Modular sections
-              %span.badge-md.ms-3.mb-0.fs-6.badge.rounded-pill.text-white.bg-tertiary Pro
-            %p.mb-4.lead.fw-bold More than 50 website sections
+              Easy USSD Apps managment
+            %p.mb-4.lead.fw-bold Use flows to create USSD apps and menus
             %p.mb-4
-              Using the sections in Pixel Pro you can easily build new pages by adding them
-              together
+              In order to best capture your new business requirement, you can simply just drag, drop and type, to create or modify your USSD menus without calling a developer to adjust the code base?
             %a.btn.btn-primary.mt-2.animate-up-2{href: "https://demo.themesberg.com/pixel-pro/v5/html/sections/all-sections.html", target: "_blank"}
               %span.fas.fa-th-large.me-2
-              Explore sections
+              Getting started
           .col-lg-6
-            %img{alt: "MapBox Leaflet.js Custom Integration Mockup", src: "{% static 'landing/assets/img/sections-mockup.jpg' %}"}/
+            %img{alt: "Ussd Managment", src: "{% static 'landing/assets/img/ussd.jpeg' %}"}/
         .row.justify-content-between.align-items-center
           .col-12.col-lg-5.order-lg-2.mb-5.mb-lg-0
             %h2.h1.d-flex.align-items-center
-              User Dashboard
-              %span.badge-md.ms-3.mb-0.fs-6.badge.rounded-pill.text-white.bg-tertiary Pro
-            %p.mb-4.lead.fw-bold 9 dashboard pages
+              APIs
+            %p.mb-4.lead.fw-bold Do not worry about incompatibility
             %p.mb-4
-              Quickly set up a user settings panel with the advanced dashboard pages including
-              billing, settings, messaging
+              Different APIs use different formats during communication. We extend power to determine how your setup should communicate with external APIs to you. You don't even have to write code to support all individual APIs.
             %a.btn.btn-tertiary.animate-up-2{href: "https://demo.themesberg.com/pixel-pro/v5/html/dashboard/account.html", target: "_blank"}
-              %span.fas.fa-chart-line.me-2
-              Explore
-              dashboard
+              Let's try it
           .col-12.col-lg-6.order-lg-1
-            %img{alt: "Dashboard Preview", src: "{% static 'landing/assets/img/presentation-mockup-dashboard.png' %}"}/
+            %img{alt: "Dashboard Preview", src: "{% static 'landing/assets/img/api.jpg' %}"}/
     .section.section-sm.pb-0.mb-n4
       .container
         .row.justify-content-center
@@ -108,30 +98,51 @@
       .container
         .row.mb-5
           .col-12.col-md-6.col-lg-4.mb-5.mb-lg-0
-            .card.shadow.text-center
-              .card-header.bg-white.p-3
+            .card.shadow
+              .card-header.bg-white.p-3.text-center
                 %h3.text-primary.mb-4 Free
                 %span.d-block
                   %span.display-1.text-dark.fw-bold
                     %span.align-top.font-medium> $
-                    19
+                    0
                   %span.d-block.text-gray.font-small / month
               .card-body
-                %ul.list-unstyled.mb-4
-                  %li.list-item.pb-3
-                    %strong 1
-                    free domain
-                  %li.list-item.pb-3
-                    Storage space:
-                    %strong 5GB
-                  %li.list-item.pb-3
-                    %strong 100k
-                    monthly visitors
-                  %li.list-item.pb-3 One-click staging site
-                  %li.list-item.pb-3 Search engine wizard
-                  %li.list-item.pb-3 Community support
+                %ul.list-group.list-group-flush.price-list
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %strong Free
+                    Download on Github
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Free Bulky SMS implementation
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    SMS Gateway(kannel)
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Free installation and setup
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Personalized SMS Capabilities
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    USSD Menu management engine
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Configurable  API support
+                  %li.list-group-item.bg-white.border-0.border-0.ps-0.pb-0
+                    %span.icon-danger
+                      %span.fas.fa-times-circle
+                    Premium
+                    Support
+                  %br
                 .d-grid
-                  %a.btn.btn-primary.animate-up-1{href: "#"} Purchase now
+                  %a.btn.btn-primary.animate-up-1{href: "https://github.com/ekeeya/mondo"} Download on GitHub
           .col-12.col-md-6.col-lg-4.mb-5.mb-lg-0
             .card.shadow
               .card-header.bg-white.p-3.text-center
@@ -139,37 +150,47 @@
                 %span.d-block
                   %span.display-1.text-dark.fw-bold
                     %span.align-top.font-medium> $
-                    19
+                    500
                   %span.d-block.text-gray.font-small / month
               .card-body
                 %ul.list-group.list-group-flush.price-list
                   %li.list-group-item.bg-white.border-0.ps-0
-                    %strong 80
-                    Components
+                    %strong Free
+                    Download on Github
                   %li.list-group-item.bg-white.border-0.ps-0
-                    %strong 6
-                    Example Pages
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Free Bulky SMS implementation
                   %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    SMS Gateways(kannel, mbuni)
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Free installation and setup
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Personalized SMS Capabilities
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    USSD Menu management engine
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Configurable  API support
+                  %li.list-group-item.bg-white.border-0.border-0.ps-0.pb-0
                     %span.icon-danger
                       %span.fas.fa-times-circle
-                    Uncoventional cards
-                  %li.list-group-item.bg-white.border-0.ps-0
-                    %span.icon-danger
-                      %span.fas.fa-times-circle
-                    Timelines
-                  %li.list-group-item.bg-white.border-0.ps-0
-                    %span.icon-danger
-                      %span.fas.fa-times-circle
-                    E-commerce
-                  %li.list-group-item.bg-white.border-0.ps-0
-                    %span.icon-danger
-                      %span.fas.fa-times-circle
-                    Charts
-                  %li.list-group-item.bg-white.border-0.ps-0.pb-0
+                    Access to online instance
+                  %li.list-group-item.bg-white.border-0.border-0.ps-0.pb-0
                     %span.icon-danger
                       %span.fas.fa-times-circle
                     Premium
                     Support
+                  %br
                 .d-grid
                   %a.btn.btn-primary.animate-up-1{href: "#"} Purchase now
               / End Content
@@ -181,40 +202,47 @@
                 %span.d-block
                   %span.display-1.text-dark.fw-bold
                     %span.align-top.font-medium> $
-                    19
+                    800
                   %span.d-block.text-gray.font-small / month
-              / End Header
-              / Content
               .card-body
                 %ul.list-group.list-group-flush.price-list
                   %li.list-group-item.bg-white.border-0.ps-0
-                    %strong 1000+
-                    Components
-                  %li.list-group-item.bg-white.border-0.ps-0
-                    %strong 35
-                    Example Pages
-                  %li.list-group-item.bg-white.border-0.ps-0 Dashboard included
+                    %strong Free
+                    Download on Github
                   %li.list-group-item.bg-white.border-0.ps-0
                     %span.icon-success
                       %span.fas.fa-check-circle
-                    Uncoventional cards
+                    Free Bulky SMS implementation
                   %li.list-group-item.bg-white.border-0.ps-0
                     %span.icon-success
                       %span.fas.fa-check-circle
-                    Timelines
+                    SMS Gateways(kannel, mbuni)
                   %li.list-group-item.bg-white.border-0.ps-0
                     %span.icon-success
                       %span.fas.fa-check-circle
-                    E-commerce
+                    Free installation and setup
                   %li.list-group-item.bg-white.border-0.ps-0
                     %span.icon-success
                       %span.fas.fa-check-circle
-                    Premium charts
+                    Personalized SMS Capabilities
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    USSD Menu management engine
+                  %li.list-group-item.bg-white.border-0.ps-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Configurable  API support
+                  %li.list-group-item.bg-white.border-0.border-0.ps-0.pb-0
+                    %span.icon-success
+                      %span.fas.fa-check-circle
+                    Access to online instance
                   %li.list-group-item.bg-white.border-0.border-0.ps-0.pb-0
                     %span.icon-success
                       %span.fas.fa-check-circle
                     Premium
-                    Support
+                    Support (24/7)
+                  %br
                 .d-grid
                   %a.btn.btn-primary.animate-up-1{href: "#"} Purchase now
             / End Content
@@ -240,13 +268,13 @@
             %h2.h1.font-weight-light.mb-3
               %strong Open source
             %p.lead.mb-4
-              Mondo is an open source project that offers easy managment of USSD
-              application by allowing non-technical personel create and midify USSD menus using intuitive
+              Mondo is an open source project that offers easy management of USSD
+              applications by allowing non-technical personnel create and modify USSD menus using intuitive
               highly flexible flows.
-            %p.lead.mb-4 Mondo also allows you send highly customized SMSs using uploaded Lists.
+            %p.lead.mb-4 Mondo also allows you send highly personalized SMSs using uploaded lists.
             .d-flex.align-items-center
-              %a.btn.btn-github.me-4.animate-up-2{href: "https://github.com/themesberg/pixel-bootstrap-ui-kit", target: "_blank"}
+              %a.btn.btn-github.me-4.animate-up-2{href: "https://github.com/ekeeya/mondo", target: "_blank"}
                 View on GitHub
               .mt-2
-                %a.github-button{:aria-label => "Star themesberg/pixel-bootstrap-ui-kit on GitHub", :data-color-scheme => "no-preference: dark; light: light; dark: light;", :data-icon => "octicon-star", :data-show-count => "true", :data-size => "large", href: "https://github.com/themesberg/pixel-bootstrap-ui-kit"} Star
+                %a.github-button{:aria-label => "Star ekeeya/mondo on GitHub", :data-color-scheme => "no-preference: dark; light: light; dark: light;", :data-icon => "octicon-star", :data-show-count => "true", :data-size => "large", href: "https://github.com/ekeeya/mondo"} Star
 
