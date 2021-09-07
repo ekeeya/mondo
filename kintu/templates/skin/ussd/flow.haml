@@ -1,0 +1,19 @@
+-extends 'skin/base.html'
+  -block main
+    .row
+      .col-md
+        %section.widget
+          %header
+            %h5
+              %span.mo-flow-merge{:style=>"font-size:30pt"}
+              %span{:style=>"font-size:16pt;margin-left:1em"} Virtual Banking (*221#)
+            .col-md-4{:style=>"margin-top:2em"}
+              %button.btn.btn-info
+                %i.glyphicon.glyphicon-edit
+                &nbsp;&nbsp;Edit
+            .widget-controls
+              %a{:data-widgste => "close", :href => "#", :title => "Close"}
+                %i.la.la-remove{:style=>"color:#DB4437"}
+          .widget-body
+            .widget-padding-md.border.rounded
+

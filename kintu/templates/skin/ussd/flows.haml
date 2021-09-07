@@ -5,7 +5,7 @@
         %section.widget
           %header
             %h5
-              %span.mo-tree-2{:style=>"font-size:30pt"}
+              %span.mo-tree{:style=>"font-size:30pt"}
               %span{:style=>"font-size:25pt;margin-left:1em"} USSD Flows
               %br
               %br
@@ -33,16 +33,17 @@
                         %label{:for => "checkbox1"}
                     %th Name
                     %th Created On
-                    %th Status
+                    %th.text-center Status
                 %tbody
                   %tr
                     %td
                       .checkbox.abc-checkbox
                         %input#checkbox2{:type => "checkbox"}/
                         %label{:for => "checkbox2"}
-                    %td Virtual Banking (*221#)
-                    %td July , 10 2021
                     %td
+                      %a{:href=>"{% url 'flow' uuid='215v273g7Vuyd' %}"} Virtual Banking (*221#)
+                    %td July , 10 2021
+                    %td.text-center
                       %span.badge.bg-success Active
                   %tr
                     %td
@@ -50,7 +51,7 @@
                         %input#checkbox3{:type => "checkbox"}/
                         %label{:for => "checkbox3"}
                     %td
-                      Environmental Research Channel (*267#)
+                      %a{:href=>"{% url 'flow' uuid='87473843GCDyf&jhCv' %}"} Environmental Research Channel (*267#)
                     %td August , 20 2020
-                    %td
+                    %td.text-center
                       %span.badge.bg-danger Disabled

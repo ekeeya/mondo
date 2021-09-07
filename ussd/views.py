@@ -18,8 +18,17 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 
 
-class USSDApplicationView(TemplateView):
-    template_name = "skin/ussd/apps.haml"
+class USSDApplicationsListView(TemplateView):
+    template_name = "skin/ussd/flows.haml"
 
     def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
+
+
+class USSDApplicationView(TemplateView):
+    template_name = "skin/ussd/flow.haml"
+
+    def get(self, request, *args, **kwargs):
+        if 'uuid' in kwargs:
+            print(kwargs['uuid'])
         return render(request, self.template_name)

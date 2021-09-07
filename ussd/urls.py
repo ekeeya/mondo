@@ -2,5 +2,6 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('apps', USSDApplicationView.as_view(), name='ussd_apps'),
+    path('flows', USSDApplicationsListView.as_view(), name='ussd_apps'),
+    path('flow/<str:uuid>', USSDApplicationView.as_view(), name='flow'),
 ]
