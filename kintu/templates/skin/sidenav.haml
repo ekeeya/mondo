@@ -1,0 +1,60 @@
+%nav#sidebar.sidebar{:role => "navigation"}
+  .js-sidebar-content
+    %header.logo.d-none.d-md-block
+      %a{:href => "https://mondo.io"} Mondo
+    .sidebar-status.d-md-none
+      %a.dropdown-toggle{:data-toggle => "dropdown", :href => "#"}
+        %span.thumb-sm.avatar.float-right
+          %img.rounded-circle{:alt => "...", :src => "demo/img/people/a5.jpg"}/
+        %span.circle.bg-success.fw-bold
+          13
+         
+        Keeya
+        %strong Emmanuel
+    %ul.sidebar-nav
+      %li.active
+        %a{:href => "index.html"}
+          %span.icon
+            %i.fi.flaticon-home
+          Dashboard
+    %h5.sidebar-nav-title
+      MODULES
+      %a.action-link{:href => "#"}
+        %i.fi.flaticon-layers{:style => "font-size: 20px;"}
+    %ul.sidebar-nav
+      %li
+        %a.collapsed{:data-parent => "#sidebar", :data-toggle => "collapse", :href => "#sidebar-ussd"}
+          %span.icon
+            %i.fi.flaticon-controls
+          USSD
+          %i.toggle.fa.fa-angle-down
+        %ul#sidebar-ussd.collapse
+          %li
+            %a{:href => "{% url 'ussd_apps' %}"}
+              %i.fi.flaticon-app>
+                &nbsp;&nbsp;Flows
+          %li
+            %a{:href => "#"}
+              %i.fi.flaticon-network>
+               &nbsp;Aggregator APIs
+      %li
+        %a{:href => "typography.html"}
+          %span.icon
+            %span.mo-bubble-2
+          SMS
+    %h5.sidebar-nav-title
+      CONFIGURATIONS
+      %a.action-link{:href => "#"}
+        %i.fi.flaticon-settings-1{:style => "font-size: 20px;"}
+    %ul.sidebar-nav
+      %li
+        %a.collapsed{:data-parent => "#sidebar", :data-toggle => "collapse", :href => "#sidebar-gateways"}
+          %span.icon
+            %i.fi.flaticon-server-1
+          SMS GATEWAYS
+          %i.toggle.fa.fa-angle-down
+        %ul#sidebar-gateways.collapse
+          %li
+            %a{:href => "#"} Kannel
+          %li
+            %a{:href => "#"} Mbuni

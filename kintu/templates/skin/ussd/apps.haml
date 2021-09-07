@@ -1,0 +1,56 @@
+-extends 'skin/base.html'
+  -block main
+    .row
+      .col-md
+        %section.widget
+          %header
+            %h5
+              %span.mo-tree-2{:style=>"font-size:30pt"}
+              %span{:style=>"font-size:25pt;margin-left:1em"} USSD Flows
+              %br
+              %br
+              %br
+              %small{:style=>"top:1em"} A list for all configured USSD flows
+              %br
+              %br
+            .col-md-4
+              %input.form-control{:placeholder=>"Search Flow"}
+            .widget-controls
+              %a{:data-widgste => "expand", :href => "#", :style => "display: none;", :title => "Expand"}
+                %i.la.la-angle-up
+              %a{:data-widgste => "collapse", :href => "#", :title => "Collapse"}
+                %i.la.la-angle-down
+              %a{:data-widgste => "close", :href => "#", :title => "Close"}
+                %i.la.la-remove
+          .widget-body
+            .widget-padding-md.border.rounded
+              %table.table.table-striped.table-hover
+                %thead
+                  %tr
+                    %th
+                      .checkbox.abc-checkbox
+                        %input#checkbox1{:data-check-all => "", :type => "checkbox"}/
+                        %label{:for => "checkbox1"}
+                    %th Name
+                    %th Created On
+                    %th Status
+                %tbody
+                  %tr
+                    %td
+                      .checkbox.abc-checkbox
+                        %input#checkbox2{:type => "checkbox"}/
+                        %label{:for => "checkbox2"}
+                    %td Virtual Banking (*221#)
+                    %td July , 10 2021
+                    %td
+                      %span.badge.bg-success Active
+                  %tr
+                    %td
+                      .checkbox.abc-checkbox
+                        %input#checkbox3{:type => "checkbox"}/
+                        %label{:for => "checkbox3"}
+                    %td
+                      Environmental Research Channel (*267#)
+                    %td August , 20 2020
+                    %td
+                      %span.badge.bg-danger Disabled

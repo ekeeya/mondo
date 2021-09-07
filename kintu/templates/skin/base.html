@@ -4,7 +4,8 @@
     <head>
         <title>Mondo</title>
         <link href="{% static 'skin/css/application.min.css' %}" rel="stylesheet">
-        <link rel="shortcut icon" href="img/favicon.png">
+        <link href="{% static 'skin/fonts/mondo/style.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'skin/img/favicon.png' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="Sing App - Bootstrap 4 Admin Dashboard Template">
         <meta name="keywords" content="bootstrap admin template,admin template,admin dashboard,admin dashboard template,admin,dashboard,bootstrap,template">
@@ -17,214 +18,16 @@
         </script>
     </head>
     <body class="">
-        {% include 'skin/sidenav.html' %}
-        {% include 'skin/topbar.html' %}
-            <div class="theme-helper">
-                <section class="widget theme-helper-content">
-                    <header class="theme-helper-header d-flex p-0">
-                        <div class="theme-helper-toggler">
-                            <div class="theme-helper-spinner bg-primary text-white">
-                                <i class="la la-cog"></i>
-                                <i class="la la-cog fs-smaller"></i>
-                            </div>
-                        </div>
-                        <h6>Configuration</h6>
-                    </header>
-                    <div class="widget-body mt-3">
-                        <div class="mt-4">
-                            <a href="https://flatlogic.com/dashboards/sing-app-html5"
-                               target="_blank"
-                               role="button"
-                               class="btn btn-warning btn-rounded-f btn-block fs-mini text-white">
-                                Purchase
-                            </a>
-                            <a href="https://flatlogic.com/templates/sing-app-html5"
-                               target="_blank"
-                               role="button"
-                               class="btn btn-danger btn-rounded-f btn-block fs-mini">
-                                Go FULL Version
-                            </a>
-                            <a href="http://demo.flatlogic.com/sing-app/documentation/"
-                               target="_blank"
-                               role="button"
-                               class="btn btn-secondary btn-rounded-f btn-block fs-mini">
-                                Documentation
-                            </a>
-                        </div>
-                        <div class="d-flex justify-content-between mt-lg">
-                            <a role="button"
-                               target="_blank"
-                               href="https://flatlogic.com/forum"
-                               class="btn btn-outline-default btn-rounded-f fs-mini text-muted">
-                                <i class="glyphicon glyphicon-headphones mr-xs"></i>
-                                Support
-                            </a>
-                            <a role="button"
-                               target="_blank"
-                               href="https://github.com/flatlogic/sing-app"
-                               class="btn btn-outline-default btn-rounded-f fs-mini text-muted">
-                                <i class="fa fa-github mr-xs"></i>
-                                Github
-                            </a>
-                        </div>
-                        <div class="mt-lg d-flex flex-column align-items-center theme-sharing">
-                            <span class="fs-sm">
-                                Thank you for sharing!
-                            </span>
-                            <div class="d-flex justify-content-center text-light mt-2">
-                                <a target="_blank"
-                                   href="https://twitter.com/intent/tweet?text=Admin%20dashboard%20template%20built%20with%20NodeJS,%20React%20and%20Bootstrap%204!&url=https://demo.flatlogic.com/sing-app/html-bs4/&via=flatlogic">
-                                    <i class="fa fa-twitter pr-1"></i>
-                                </a>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://demo.flatlogic.com/sing-app/html-bs4/"
-                                   target="_blank">
-                                    <i class="fa fa-facebook pl-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+        {% include 'skin/sidenav.haml' %}
+        {% include 'skin/topbar.haml' %}
+        {% include 'skin/helper.haml'%}
 
         <div class="content-wrap">
-            <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
-            <main id="content" class="content" role="main">
-                <!-- Page content -->
+             <main id="content" class="content" role="main">
+                {% block main%}
 
-        <div class="analytics">
-            <div class="analytics-side">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-12 last-side-element">
-                        <section class="widget">
-                            <header>
-                                <h4>Notifications <span
-                                        class="badge badge-pill badge-primary fw-normal pull-right mt-xs">6</span></h4>
-                            </header>
-                            <div class="widget-body w-100 notifications">
-                                <div class="d-flex align-items-start">
-                                    <i class="la la-thumbs-up mr text-info"></i>
-                                    <p>Ken <span class="fw-semi-bold">accepts</span> your invitation</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-file mr text-info"></i>
-                                    <p>Report from LT Company</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-envelope mr text-info"></i>
-                                    <p>4 <span class="fw-semi-bold">Private</span> Mails</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-comment mr text-info"></i>
-                                    <p>3 <span class="fw-semi-bold">Comments</span> to your Post</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-cog mr text-info"></i>
-                                    <p>New <span class="fw-semi-bold">Version</span> of RNS app</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-bell mr text-info"></i>
-                                    <p>15 <span class="fw-semi-bold">Notifications</span> from Social Apps</p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-12 last-side-element">
-                        <section class="widget pb-2 mb-xlg">
-                            <header>
-                                <h4>Today's Tasks <span
-                                        class="badge badge-pill badge-primary fw-normal pull-right mt-xs">11</span></h4>
-                                <p class="text-primary mb-0"><small class="tasks-stat"></small></p>
-                            </header>
-                            <div class="widget-body task-container">
-                                <div class="task d-flex align-items-start">
-                                    <div class="form-check abc-checkbox abc-checkbox-success d-flex">
-                                        <input class="form-check-input" id="checkbox1" type="checkbox">
-                                        <label class="form-check-label" for="checkbox1"></label>
-                                    </div>
-                                    <div class="task-content">
-                                        <p class="text-muted mb-xs"><small>Meeting</small></p>
-                                        <h6>Meeting with Andrew Piker</h6>
-                                        <p class="text-muted"><small>9:00</small></p>
-                                    </div>
-                                </div>
-                                <div class="task d-flex align-items-start">
-                                    <div class="form-check abc-checkbox abc-checkbox-success d-flex">
-                                        <input class="form-check-input" id="checkbox2" type="checkbox">
-                                        <label class="form-check-label" for="checkbox2"></label>
-                                    </div>
-                                    <div class="task-content">
-                                        <p class="text-muted mb-xs"><small>Call</small></p>
-                                        <h6>Call with HT Company</h6>
-                                        <p class="text-muted"><small>12:00</small></p>
-                                    </div>
-                                </div>
-                                <div class="task d-flex align-items-start">
-                                    <div class="form-check abc-checkbox abc-checkbox-success d-flex">
-                                        <input class="form-check-input" id="checkbox3" type="checkbox">
-                                        <label class="form-check-label" for="checkbox3"></label>
-                                    </div>
-                                    <div class="task-content">
-                                        <p class="text-muted mb-xs"><small>Meeting</small></p>
-                                        <h6>Meeting with Zoe Alison</h6>
-                                        <p class="text-muted"><small>14:00</small></p>
-                                    </div>
-                                </div>
-                                <div class="task d-flex align-items-start">
-                                    <div class="form-check abc-checkbox abc-checkbox-success d-flex">
-                                        <input class="form-check-input" id="checkbox4" type="checkbox">
-                                        <label class="form-check-label" for="checkbox4"></label>
-                                    </div>
-                                    <div class="task-content">
-                                        <p class="text-muted mb-xs"><small>Interview</small></p>
-                                        <h6>Interview with HR</h6>
-                                        <p class="text-muted"><small>15:00</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-transparent w-100 text-center text-muted" role="button">See All <i
-                                    class="la la-arrow-down"></i></a>
-                        </section>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-xl-12">
-                        <section class="widget">
-                            <header>
-                                <h4>Notification <span
-                                        class="badge badge-pill badge-primary fw-normal pull-right mt-xs">6</span></h4>
-                            </header>
-                            <div class="widget-body w-100 notifications">
-                                <div class="d-flex align-items-start">
-                                    <i class="la la-thumbs-up mr text-info"></i>
-                                    <p>Ken <span class="fw-semi-bold">accepts</span> your invitation</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-file mr text-info"></i>
-                                    <p>Report from LT Company</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-envelope mr text-info"></i>
-                                    <p>4 <span class="fw-semi-bold">Private</span> Mails</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-comment mr text-info"></i>
-                                    <p>3 <span class="fw-semi-bold">Comments</span> to your Post</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-cog mr text-info"></i>
-                                    <p>New <span class="fw-semi-bold">Version</span> of RNS app</p>
-                                </div>
-                                <div class="d-flex w-100">
-                                    <i class="la la-bell mr text-info"></i>
-                                    <p>15 <span class="fw-semi-bold">Notifications</span> from Social Apps</p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-                    <footer class="content-footer">
-                        Mondo v1.0.25 - by <a href="https://flatlogic.com" rel="nofollow" target="_blank">Keeya Emmanuel</a>
-                    </footer>
+                {% endblock main%}
+                {% include 'skin/footer.haml'%}
             </main>
         </div>
         <!-- The Loader. Is shown when pjax happens -->
@@ -249,6 +52,6 @@
         <script src="{% static 'skin/js/settings.js' %}"></script>
         <script src="{% static 'skin/js/app.js' %}"></script>
 
-        <!-- page specific js -->
+        {% block scripts %}{% endblock scripts %}
     </body>
 </html>

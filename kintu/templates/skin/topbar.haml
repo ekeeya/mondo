@@ -1,0 +1,135 @@
+%nav.page-controls.navbar.navbar-dashboard
+  .container-fluid
+    .navbar-header.mr-md-3
+      %ul.nav.navbar-nav
+        %li.nav-item
+          %a#nav-state-toggle.d-none.d-lg-block.nav-link{:href => "#"}
+            %i.la.la-bars
+          %a#nav-collapse-toggle.d-lg-none.nav-link{:href => "#"}
+            %span.square.square-lg.d-md-none
+              %i.la.la-bars
+            %i.la.la-bars.d-none.d-md-block
+      %ul.nav.navbar-nav.navbar-right.d-md-none
+        %li.nav-item
+          %a.nav-link{:data-toggle => "chat-sidebar", :href => "#"}
+            %span.square.square-lg
+              %i.la.la-globe
+      %a.navbar-brand.d-md-none{:href => "../dashboard/index.html"}
+        %i.fa.fa-circle.text-danger
+         Mondo
+        %i.fa.fa-circle.text-primary
+    .navbar-header.mobile-hidden
+      %form.navbar-form{:role => "search"}
+        .form-group
+          .input-group.input-group-no-border.ml-4
+            %input#main-search.form-control{:placeholder => "Search Dashboard", :type => "text"}/
+            %span.input-group-append
+              %span.input-group-text
+                %i.la.la-search
+      %ul.nav.navbar-nav.float-right
+        %li.dropdown.nav-item
+          %a#notifications-dropdown-toggle.dropdown-toggle.dropdown-toggle-notifications.nav-link{:aria-expanded => "false", :aria-haspopup => "true", :data-disable-interaction => "false", :data-position => "bottom-middle-aligned", :data-toggle => "dropdown", :href => "#", :role => "button"}
+            %span.thumb-sm.avatar.float-left
+            Digital
+              %strong Solutions
+          #notifications-dropdown-menu.dropdown-menu.dropdown-menu-right.animated.fadeInUp.py-0{:aria-labelledby => "notifications-dropdown-toggle"}
+            %section.card.notifications
+              %header.card-header
+                .text-center.mb-sm
+                  %strong You have 13 notifications
+                #notifications-toggle.btn-group.btn-group-sm.btn-group-toggle{:data-toggle => "buttons"}
+                  %label.btn.btn-default.active
+                    %input{:checked => "checked", :data-ajax-load => "demo/ajax/notifications.html", :data-ajax-target => "#notifications-list", :data-ajax-trigger => "change", :type => "radio"}/
+                    Notifications
+                  %label.btn.btn-default
+                    %input{:data-ajax-load => "demo/ajax/messages.html", :data-ajax-target => "#notifications-list", :data-ajax-trigger => "change", :type => "radio"}/
+                    Messages
+                  %label.btn.btn-default
+                    %input{:data-ajax-load => "demo/ajax/progress.html", :data-ajax-target => "#notifications-list", :data-ajax-trigger => "change", :type => "radio"}/
+                    Progress
+              #notifications-list.list-group.thin-scroll
+                .list-group-item
+                  %span.thumb-sm.float-left.mr.clearfix
+                    %img.rounded-circle{:alt => "...", :src => "demo/img/people/a3.jpg"}/
+                  %p.no-margin.overflow-hidden
+                    1 new user just signed up! Check out
+                      %a{:href => "#"} Monica Smith
+                    %time.help-block.no-margin
+                      2 mins ago
+                %a.list-group-item{:href => "#"}
+                  %span.thumb-sm.float-left.mr
+                    %i.glyphicon.glyphicon-upload.fa-lg
+                  %p.text-ellipsis.no-margin
+                    2.1.0-pre-alpha just released.
+                  %time.help-block.no-margin
+                    5h ago
+                %a.list-group-item{:href => "#"}
+                  %span.thumb-sm.float-left.mr
+                    %i.fa.fa-bolt.fa-lg
+                  %p.text-ellipsis.no-margin
+                    Server load limited.
+                  %time.help-block.no-margin
+                    7h ago
+                .list-group-item
+                  %span.thumb-sm.float-left.mr.clearfix
+                    %img.rounded-circle{:alt => "...", :src => "demo/img/people/a5.jpg"}/
+                  %p.no-margin.overflow-hidden
+                    User
+                    %a{:href => "#"} Jeff
+                    registered
+                      
+                    %button.btn.btn-xs.btn-success Allow
+                    %button.btn.btn-xs.btn-danger Deny
+                    %time.help-block.no-margin
+                      12:18 AM
+                .list-group-item
+                  %span.thumb-sm.float-left.mr
+                    %i.fa.fa-shield.fa-lg
+                  %p.no-margin.overflow-hidden
+                    Instructions for changing your Envato Account password. Please
+                    check your account
+                      %a{:href => "#"} security page
+                    %time.help-block.no-margin
+                      12:18 AM
+                %a.list-group-item{:href => "#"}
+                  %span.thumb-sm.float-left.mr
+                    %span.square.bg-primary.square-lg
+                      %i.fa.fa-facebook.text-white
+                  %p.text-ellipsis.no-margin
+                    New
+                    %strong 76
+                    facebook likes received.
+                  %time.help-block.no-margin
+                    15 Apr 2014
+                %a.list-group-item{:href => "#"}
+                  %span.thumb-sm.float-left.mr
+                    %span.circle.circle-lg.bg-gray-dark
+                      %i.fa.fa-circle-o.text-white
+                  %p.text-ellipsis.no-margin
+                    Dark matter detected.
+                  %time.help-block.no-margin
+                    15 Apr 2014
+              %footer.card-footer.text-sm
+
+                %span.card-footer-text Synced at: 21 Apr 2014 18:36
+        %li.dropdown.nav-item
+          %a.dropdown-toggle.no-caret.nav-link{:data-toggle => "dropdown", :href => "#"}
+            %i.la.la-cog
+          %ul.dropdown-menu.dropdown-menu-right
+            %li
+              %a.dropdown-item{:href => "#"}
+                %i.glyphicon.glyphicon-user
+                  My
+                Account
+            %li.dropdown-divider
+            %li
+              %a.dropdown-item{:href => "#"} Calendar
+            %li
+              %a.dropdown-item{:href => "#"}
+                Inbox   
+                %span.badge.badge-pill.bg-danger.animated.bounceIn 9
+            %li.dropdown-divider
+            %li
+              %a.dropdown-item{:href => "#"}
+                %i.la.la-sign-out
+                  Log Out

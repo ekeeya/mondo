@@ -28,7 +28,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-common.py
+local.py
 
 # Installer logs
 pip-log.txt
