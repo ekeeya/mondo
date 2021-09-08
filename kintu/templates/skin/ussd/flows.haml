@@ -9,49 +9,73 @@
               %span{:style=>"font-size:25pt;margin-left:1em"} USSD Flows
               %br
               %br
-              %br
               %small{:style=>"top:1em"} A list for all configured USSD flows
               %br
               %br
-            .col-md-4
-              %input.form-control{:placeholder=>"Search Flow"}
-            .widget-controls
-              %a{:data-widgste => "expand", :href => "#", :style => "display: none;", :title => "Expand"}
-                %i.la.la-angle-up
-              %a{:data-widgste => "collapse", :href => "#", :title => "Collapse"}
-                %i.la.la-angle-down
-              %a{:data-widgste => "close", :href => "#", :title => "Close"}
-                %i.la.la-remove
+            .row
+              .col-md-8.row
+                .col
+                  %button.btn.btn-outline-danger
+                    %i.fa.fa-archive
+                    Deactivate
+                  %button.btn.btn-outline-success
+                    %i.mo-excel
+                    Export
+              .col-md-4
+                %input.form-control{:placeholder=>"Search Flow"}
+
           .widget-body
             .widget-padding-md.border.rounded
-              %table.table.table-striped.table-hover
-                %thead
-                  %tr
-                    %th
-                      .checkbox.abc-checkbox
-                        %input#checkbox1{:data-check-all => "", :type => "checkbox"}/
-                        %label{:for => "checkbox1"}
-                    %th Name
-                    %th Created On
-                    %th.text-center Status
-                %tbody
-                  %tr
-                    %td
-                      .checkbox.abc-checkbox
-                        %input#checkbox2{:type => "checkbox"}/
-                        %label{:for => "checkbox2"}
-                    %td
-                      %a{:href=>"{% url 'flow' uuid='215v273g7Vuyd' %}"} Virtual Banking (*221#)
-                    %td July , 10 2021
-                    %td.text-center
-                      %span.badge.bg-success Active
-                  %tr
-                    %td
-                      .checkbox.abc-checkbox
-                        %input#checkbox3{:type => "checkbox"}/
-                        %label{:for => "checkbox3"}
-                    %td
-                      %a{:href=>"{% url 'flow' uuid='87473843GCDyf&jhCv' %}"} Environmental Research Channel (*267#)
-                    %td August , 20 2020
-                    %td.text-center
-                      %span.badge.bg-danger Disabled
+              .row
+                .col-md-9
+                  %table.table.table-striped.table-hover
+                    %thead
+                      %tr
+                        %th
+                          .checkbox.abc-checkbox
+                            %input#checkbox1{:data-check-all => "", :type => "checkbox"}/
+                            %label{:for => "checkbox1"}
+                        %th Name
+                        %th Created On
+                        %th.text-center Status
+                    %tbody
+                      %tr
+                        %td
+                          .checkbox.abc-checkbox
+                            %input#checkbox2{:type => "checkbox"}/
+                            %label{:for => "checkbox2"}
+                        %td
+                          %a{:href=>"{% url 'flow' uuid='215v273g7Vuyd' %}"} Virtual Banking (*221#)
+                        %td July , 10 2021
+                        %td.text-center
+                          %span.badge.bg-success Active
+                      %tr
+                        %td
+                          .checkbox.abc-checkbox
+                            %input#checkbox3{:type => "checkbox"}/
+                            %label{:for => "checkbox3"}
+                        %td
+                          %a{:href=>"{% url 'flow' uuid='87473843GCDyf&jhCv' %}"} Environmental Research Channel (*267#)
+                        %td August , 20 2020
+                        %td.text-center
+                          %span.badge.bg-danger Disabled
+                .col-md-3
+                  %header.text-center
+                    %button.btn.btn-primary.btn-block
+                      Create Flow
+                  %table.table
+                    %tr
+                      %td
+                        %b Active
+                      %td 2
+                    %tr
+                      %td
+                        %b Disabled
+                      %td 0
+                    %tr
+                      %td
+                        %b Deleted
+                      %td 0
+
+
+    /modal
