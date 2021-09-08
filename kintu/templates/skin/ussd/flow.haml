@@ -5,6 +5,7 @@
       %li.breadcrumb-item
         %a{:href=>"{% url 'ussd_apps' %}"} Flows
       %li.breadcrumb-item.active Flow
+
   -block main
     .row
       .col-md
@@ -22,19 +23,18 @@
                 %i.la.la-remove{:style=>"color:#DB4437"}
           .widget-body
             .widget-padding-md.border.rounded
+              #floweditor.card-body
 
     / -- Modal--
     #editFlowModal.modal.fade{:aria-hidden => "true", :aria-labelledby => "editFlowModalLabel", :tabindex => "-1"}
-      .modal-dialog
+      .modal-dialog.modal-lg
         .modal-content
           .modal-header
             %h5#editFlowModalLabel.modal-title Edit
-            %button.close{:aria-label => "Close", :data-dismiss => "modal", :type => "button"}
-              %span{:aria-hidden => "true"}
-                %span.fi.flaticon-multiply{:style=>'color:#fff'}
           .modal-body
             %form
           .modal-footer
+            %button.btn.btn-default{:data-dismiss => "modal", :type => "button"} Cancel
             %button.btn.btn-primary{:type => "button"}
               %span#editFlowButton.fi.flaticon-save{:style=>'color:#fff'}&nbsp;
               Save
@@ -44,4 +44,90 @@
         $("#editFlow").click(function(){
             $("#editFlowModal").modal('show')
         });
+        const url = window.location.href;
+            const newUrl = new URL(url);
+            const  uuid = newUrl.searchParams.get("uuid");
+            const base = '/ussd/';
+            const config = {
+                flow: uuid,
+                flowType: 'messaging',
+                localStorage: true,
+                attachmentsEnabled: true,
+                  mutable: true,
+                  filters: ['facebook', 'whatsapp', 'airtime', 'resthook', 'classifier', 'ticketer'],
+                  excludeTypes: [
+                    'add_contact_urn',
+                    'send_email',
+                    'set_run_result',
+                    'call_resthook',
+                    'start_session',
+                    'open_ticket',
+                    'transfer_airtime',
+                    'split_by_contact_field',
+                    'split_by_random',
+                    'split_by_groups',
+                    'split_by_scheme'
+                  ],
+
+      excludeOperators: [
+        'has_beginning',
+        'has_text',
+        'has_number_lt',
+        'has_number_lte',
+        'has_number_gte',
+        'has_number_gt',
+        'has_date',
+        'has_date_category',
+        'has_date_lt',
+        'has_number_lte',
+        'has_number_gte',
+        'has_number_gt',
+        'has_date',
+        'has_date_category',
+        'has_date_lt',
+        'has_date_eq',
+        'has_date_gt',
+        'has_time',
+        'has_group',
+        'has_category',
+        'has_state',
+        'has_state_category',
+        'has_district',
+        'has_ward',
+        'has_error',
+        'has_value',
+        'has_pattern'
+      ],
+                help: {
+                    legacy_extra: 'help.html',
+                    missing_dependency: 'help.html',
+                    invalid_regex: 'help.html'
+                  },
+                  endpoints: {
+                    globals: base + 'globals',
+                    groups: base + 'groups',
+                    fields: base + 'fields',
+                    labels: base + 'labels',
+                    channels: base + 'channels',
+                    classifiers: base + 'classifiers',
+                    ticketers: base + 'ticketers',
+                    resthooks: base + 'resthooks',
+                    templates: base + 'templates',
+                    flows: base + 'flows',
+                    revisions: base + 'revisions/'+uuid,
+                    recents: base + 'recents',
+                    languages: base + 'languages',
+                    environment: base + 'environment',
+                    recipients: base + 'recipients',
+                    functions: base + 'functions',
+                    completion: base + 'completion',
+                    attachments: base + 'attachments',
+                    activity: base + 'activity',
+                    editor: "/",
+                    simulateStart: null,
+                    simulateResume: null
+              }
+            };
+            showFlowEditor(document.getElementById('floweditor'), config);
+
       });

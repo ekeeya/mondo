@@ -50,7 +50,7 @@
                             %input#checkbox2{:type => "checkbox"}/
                             %label{:for => "checkbox2"}
                         %td
-                          %a{:href=>"{% url 'flow' uuid='215v273g7Vuyd' %}"} Virtual Banking (*221#)
+                          %a{:href=>"{% url 'flow' uuid='d5cec018-31b2-4c8a-89d6-6a16093cbb0' %}"} Virtual Banking (*221#)
                         %td July , 10 2021
                         %td.text-center
                           %span.badge.bg-success Active
@@ -60,7 +60,7 @@
                             %input#checkbox3{:type => "checkbox"}/
                             %label{:for => "checkbox3"}
                         %td
-                          %a{:href=>"{% url 'flow' uuid='87473843GCDyf&jhCv' %}"} Environmental Research Channel (*267#)
+                          %a{:href=>"{% url 'flow' uuid='d5cec018-31b2-4c8a-89d6-6a16093cbb0' %}"} Environmental Research Channel (*267#)
                         %td August , 20 2020
                         %td.text-center
                           %span.badge.bg-danger Disabled
@@ -85,23 +85,35 @@
 
     / create flow modal
     #createFlowModal.modal.fade{:aria-hidden => "true", :aria-labelledby => "createFlowModalLabel", :tabindex => "-1"}
-      .modal-dialog
+      .modal-dialog.modal-lg
         .modal-content
           .modal-header
             %h5#createFlowModalLabel.modal-title Create Flow
-            %button.close{:aria-label => "Close", :data-dismiss => "modal", :type => "button"}
-              %span{:aria-hidden => "true"}
-                %span.fi.flaticon-multiply{:style=>'color:#fff'}
           .modal-body
-            %form
-              .form-group
+            .row
+              .col-sm.col-md-7
+                .form-group
+                  {{form.name}}
+              .col-sm.col-md-5
+                .form-group.float-right
+                  {{form.type}}
+            %br
+            .row
+              .col-sm.col-md-12{:style=>"margin:auto"}
+                .form-group
+                  {{form.short_code}}
+
+
 
           .modal-footer
-            %button.btn.btn-primary{:type => "button"}
-              %span#editFlowButton.fi.flaticon-save{:style=>'color:#fff'}&nbsp;Submit
+            %button.btn.btn-default{:data-dismiss => "modal", :type => "button"} Cancel
+            %button.btn.btn-primary{:type => "button"} Create
   -block scripts
     :javascript
       $(document).ready(function(){
+        $('#id_short_code').select2({
+          placeholder:"Select Shortcode(s) to trigger flow execution if any"
+        });
         $("#createFlowButton").click(function(){
             $("#createFlowModal").modal('show')
         });
