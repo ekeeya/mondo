@@ -1,4 +1,9 @@
 -extends 'skin/base.html'
+  -block breadcrumb
+    %ol.breadcrumb
+      %li.breadcrumb-item USSD
+      %li.breadcrumb-item.active
+        %a{:href=>"{% url 'ussd_apps' %}"} Flows
   -block main
     .row
       .col-md
@@ -61,7 +66,7 @@
                           %span.badge.bg-danger Disabled
                 .col-md-3
                   %header.text-center
-                    %button.btn.btn-primary.btn-block
+                    %button#createFlowButton.btn.btn-primary.btn-block
                       Create Flow
                   %table.table
                     %tr
@@ -78,4 +83,26 @@
                       %td 0
 
 
-    /modal
+    / create flow modal
+    #createFlowModal.modal.fade{:aria-hidden => "true", :aria-labelledby => "createFlowModalLabel", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %h5#createFlowModalLabel.modal-title Create Flow
+            %button.close{:aria-label => "Close", :data-dismiss => "modal", :type => "button"}
+              %span{:aria-hidden => "true"}
+                %span.fi.flaticon-multiply{:style=>'color:#fff'}
+          .modal-body
+            %form
+              .form-group
+
+          .modal-footer
+            %button.btn.btn-primary{:type => "button"}
+              %span#editFlowButton.fi.flaticon-save{:style=>'color:#fff'}&nbsp;Submit
+  -block scripts
+    :javascript
+      $(document).ready(function(){
+        $("#createFlowButton").click(function(){
+            $("#createFlowModal").modal('show')
+        });
+      });

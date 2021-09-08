@@ -1,4 +1,10 @@
 -extends 'skin/base.html'
+  -block breadcrumb
+    %ol.breadcrumb
+      %li.breadcrumb-item USSD
+      %li.breadcrumb-item
+        %a{:href=>"{% url 'ussd_apps' %}"} Flows
+      %li.breadcrumb-item.active Flow
   -block main
     .row
       .col-md
@@ -8,7 +14,7 @@
               %span.mo-flow-merge{:style=>"font-size:30pt"}
               %span{:style=>"font-size:16pt;margin-left:1em"} Virtual Banking (*221#)
             .col-md-4{:style=>"margin-top:2em"}
-              %button.btn.btn-info
+              %button.btn.btn-info{:id=>"editFlow"}
                 %i.glyphicon.glyphicon-edit
                 &nbsp;&nbsp;Edit
             .widget-controls
@@ -17,3 +23,25 @@
           .widget-body
             .widget-padding-md.border.rounded
 
+    / -- Modal--
+    #editFlowModal.modal.fade{:aria-hidden => "true", :aria-labelledby => "editFlowModalLabel", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %h5#editFlowModalLabel.modal-title Edit
+            %button.close{:aria-label => "Close", :data-dismiss => "modal", :type => "button"}
+              %span{:aria-hidden => "true"}
+                %span.fi.flaticon-multiply{:style=>'color:#fff'}
+          .modal-body
+            %form
+          .modal-footer
+            %button.btn.btn-primary{:type => "button"}
+              %span#editFlowButton.fi.flaticon-save{:style=>'color:#fff'}&nbsp;
+              Save
+  -block scripts
+    :javascript
+      $(document).ready(function(){
+        $("#editFlow").click(function(){
+            $("#editFlowModal").modal('show')
+        });
+      });
