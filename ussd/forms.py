@@ -2,7 +2,7 @@ from django import forms
 from django.utils.safestring import mark_safe
 
 TYPES = [
-    ('', "SELECT FLOW TYPE"),
+    ('', "Select Flow Type"),
     ('ussd', "USSD"),
     ('sms', "SEND SMS"),
     ('email', "SEND EMAIL"),
@@ -11,6 +11,17 @@ TYPES = [
 CODES = [
     ('*255#', '*255#'),
     ('*211#', '*211#')
+]
+TIMEOUTS = [
+    ('', 'Timeout after'),
+    (300, '5 minutes'),
+    (600, '10 minutes'),
+    (900, '15 minutes'),
+    (600, '30 minutes'),
+    (1800, '1 hr'),
+    (86400, '1 day'),
+    (604800, "A week"),
+    ('custom', "Custom")
 ]
 
 
@@ -34,7 +45,7 @@ class CreateFlowForm(forms.Form):
             choices=TYPES,
             attrs={
                 "class": "form-control select2",
-                "style": "width:200px;"
+                "style": "width:100%;"
             }
         )
     )
@@ -45,6 +56,15 @@ class CreateFlowForm(forms.Form):
                 "class": "form-control select2",
                 "style": "width:100%;",
                 "multiple": "multiple"
+            }
+        )
+    )
+    timeout = forms.CharField(
+        widget=forms.Select(
+            choices=TIMEOUTS,
+            attrs={
+                "class": "form-control select2",
+                "style": "width:100%;"
             }
         )
     )

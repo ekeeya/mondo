@@ -91,17 +91,20 @@
             %h5#createFlowModalLabel.modal-title Create Flow
           .modal-body
             .row
-              .col-sm.col-md-7
+              .col-sm.col-md-6
                 .form-group
                   {{form.name}}
-              .col-sm.col-md-5
-                .form-group.float-right
+              .col-sm.col-md-6
+                .form-group
                   {{form.type}}
             %br
             .row
-              .col-sm.col-md-12{:style=>"margin:auto"}
+              .col-sm.col-md-6{:style=>"margin:auto"}
                 .form-group
                   {{form.short_code}}
+              .col-sm.col-md-6{:style=>"margin:auto"}
+                .form-group
+                  {{form.timeout}}
 
 
 

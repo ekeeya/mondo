@@ -12,56 +12,49 @@
 
 animate.css@3.7.2:
   version "3.7.2"
-  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
+  resolved "https://registry.npmjs.org/animate.css/-/animate.css-3.7.2.tgz"
   integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
 
 awesome-bootstrap-checkbox@1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/awesome-bootstrap-checkbox/-/awesome-bootstrap-checkbox-1.0.1.tgz#dab10146b6001129ab0a0ec1e54bb77c6c30457a"
+  resolved "https://registry.npmjs.org/awesome-bootstrap-checkbox/-/awesome-bootstrap-checkbox-1.0.1.tgz"
   integrity sha1-2rEBRrYAESmrCg7B5Uu3fGwwRXo=
 
 backbone@1.4.0:
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/backbone/-/backbone-1.4.0.tgz#54db4de9df7c3811c3f032f34749a4cd27f3bd12"
+  resolved "https://registry.npmjs.org/backbone/-/backbone-1.4.0.tgz"
   integrity sha512-RLmDrRXkVdouTg38jcgHhyQ/2zjg7a8E6sz2zxfz21Hh17xDJYUHBZimVIt5fUyS8vbfpeSmTL3gUjTEvUV3qQ==
   dependencies:
     underscore ">=1.8.3"
 
 bootstrap-select@1.13.18:
   version "1.13.18"
-  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.18.tgz#4557119d58dc1159189977161c803962220e4dda"
+  resolved "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.13.18.tgz"
   integrity sha512-V1IzK4rxBq5FrJtkzSH6RmFLFBsjx50byFbfAf8jYyXROWs7ZpprGjdHeoyq2HSsHyjJhMMwjsQhRoYAfxCGow==
 
 bootstrap@4.5.2:
   version "4.5.2"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.5.2.tgz#a85c4eda59155f0d71186b6e6ad9b875813779ab"
+  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-4.5.2.tgz"
   integrity sha512-vlGn0bcySYl/iV+BGA544JkkZP5LB3jsmkeKLFQakCOwCM3AOk7VkldBz4jrzSe+Z0Ezn99NVXa1o45cQY4R6A==
 
-bootstrap@~4:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
-  integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
+font-awesome@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
 
-hammerjs@2.0.x, hammerjs@hammer#^2.0.8:
+glyphicons-halflings@*:
+  version "1.9.1"
+  resolved "https://registry.npmjs.org/glyphicons-halflings/-/glyphicons-halflings-1.9.1.tgz"
+  integrity sha1-GOcvIANCQAOKXohDg7t5ReLdJio=
+
+hammerjs@2.0.x, hammerjs@^2.0.8:
   version "2.0.8"
-  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  resolved "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz"
   integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
-
-handlebars@^4.7.6:
-  version "4.7.7"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
-  integrity sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
-  dependencies:
-    minimist "^1.2.5"
-    neo-async "^2.6.0"
-    source-map "^0.6.1"
-    wordwrap "^1.0.0"
-  optionalDependencies:
-    uglify-js "^3.1.4"
 
 jquery-hammerjs@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/jquery-hammerjs/-/jquery-hammerjs-2.0.0.tgz#08b518fa25fb1e8ce8fe3212c387da53bbe14048"
+  resolved "https://registry.npmjs.org/jquery-hammerjs/-/jquery-hammerjs-2.0.0.tgz"
   integrity sha1-CLUY+iX7Hozo/jISw4faU7vhQEg=
   dependencies:
     hammerjs "2.0.x"
@@ -69,20 +62,27 @@ jquery-hammerjs@^2.0.0:
 
 jquery-pjax@2.0.1:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/jquery-pjax/-/jquery-pjax-2.0.1.tgz#6b3a1ba16e644e624bdcfe72eb6b3d96a846f5f2"
+  resolved "https://registry.npmjs.org/jquery-pjax/-/jquery-pjax-2.0.1.tgz"
   integrity sha1-azoboW5kTmJL3P5y62s9lqhG9fI=
+
+jquery-slimscroll@^1.3.8:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/jquery-slimscroll/-/jquery-slimscroll-1.3.8.tgz#8481c44e7a47687653908a28f7f70aed64c84e36"
+  integrity sha1-hIHETnpHaHZTkIoo9/cK7WTITjY=
+  dependencies:
+    jquery ">= 1.7"
 
 jquery-ui@1.12.1:
   version "1.12.1"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+  resolved "https://registry.npmjs.org/jquery-ui/-/jquery-ui-1.12.1.tgz"
   integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
 
-jquery@2.1.x, jquery@~2.1.3:
+jquery@2.1.4, jquery@2.1.x:
   version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
+  resolved "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz"
   integrity sha1-IoveaYoMYUMdwmMKahVPFYkNIxc=
 
-jquery@^3.6.0:
+"jquery@>= 1.7":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
@@ -92,22 +92,17 @@ jquery@^3.6.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
+line-awesome@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/line-awesome/-/line-awesome-1.3.0.tgz#51d59fe311ed040d22d8e80d3aa0b9a4b57e6cd3"
+  integrity sha512-Y0YHksL37ixDsHz+ihCwOtF5jwJgCDxQ3q+zOVgaSW8VugHGTsZZXMacPYZB1/JULBi6BAuTCTek+4ZY/UIwcw==
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
-
-minimist@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
-
-neo-async@^2.6.0:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
-  integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -116,11 +111,11 @@ object-assign@^4.1.1:
 
 "pace.js@https://github.com/HubSpot/pace.git#v0.7.1":
   version "0.7.1"
-  resolved "https://github.com/HubSpot/pace.git#6ecca7c3f3343cc9d05d50a0010c909c2bad06b1"
+  resolved "git+ssh://git@github.com/HubSpot/pace.git#6ecca7c3f3343cc9d05d50a0010c909c2bad06b1"
 
 popper.js@1.14.7:
   version "1.14.7"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.7.tgz#e31ec06cfac6a97a53280c3e55e4e0c860e7738e"
+  resolved "https://registry.npmjs.org/popper.js/-/popper.js-1.14.7.tgz"
   integrity sha512-4q1hNvoUre/8srWsH7hnoSJ5xVmIL4qgz+s4qf2TnJIMyZFUFMGH+9vE7mXynAlHSZ/NdTmmow86muD0myUkVQ==
 
 prop-types@^15.6.2:
@@ -164,27 +159,12 @@ scheduler@^0.19.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-source-map@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-  integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-
-uglify-js@^3.1.4:
-  version "3.14.2"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.14.2.tgz#d7dd6a46ca57214f54a2d0a43cad0f35db82ac99"
-  integrity sha512-rtPMlmcO4agTUfz10CbgJ1k6UAoXM2gWb3GoMPPZB/+/Ackf8lNWk11K4rYi2D0apgoFRLtQOZhb+/iGNJq26A==
-
 underscore@>=1.8.3:
   version "1.13.1"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.1.tgz#0c1c6bd2df54b6b69f2314066d65b6cde6fcf9d1"
+  resolved "https://registry.npmjs.org/underscore/-/underscore-1.13.1.tgz"
   integrity sha512-hzSoAVtJF+3ZtiFX0VgfFPHEDRm7Y/QPjGyNo4TVdnDTdft3tr8hEkD25a1jC+TjTuE7tkHGKkhwCgs9dgBB2g==
 
 widgster@0.0.3:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/widgster/-/widgster-0.0.3.tgz#c5d396ff4de85de35c09211e23c003b74aefcf3d"
+  resolved "https://registry.npmjs.org/widgster/-/widgster-0.0.3.tgz"
   integrity sha1-xdOW/03oXeNcCSEeI8ADt0rvzz0=
-
-wordwrap@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
-  integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
