@@ -23,6 +23,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Flow
 
+from datetime import datetime
+
 from .forms import CreateFlowForm
 
 
@@ -33,6 +35,9 @@ class USSDApplicationsListView(TemplateView):
         form = CreateFlowForm()
         context = dict(form=form)
         return render(request, self.template_name, context)
+
+    def post(self, request):
+        pass
 
 
 class USSDApplicationView(TemplateView):
@@ -45,7 +50,8 @@ class USSDApplicationView(TemplateView):
 
 
 class FlowView(APIView):
-    def get(self, request):
+
+    def get(self, request, *args, **kwargs):
         flow_list = [
             dict(id=1, uuid="d5cec018-31b2-4c8a-89d6-6a16093cbb07", name="Test", type='message', archived=False,
                  labels=[],
@@ -58,13 +64,11 @@ class FlowView(APIView):
 class ActivityView(APIView):
 
     def get(self, request, *args, **kwargs):
-        # print(request.query_params)
         response = {"nodes": {}, "segments": {}, "recentMessages": {}}
         return Response(response)
 
 
 class LanguagesView(APIView):
-
     def get(self, request, *args, **kwargs):
         data = [
             {
