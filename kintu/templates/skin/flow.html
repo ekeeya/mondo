@@ -1,0 +1,40 @@
+{% load static  %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mondo</title>
+        <link rel="manifest" href="{% static 'skin/node_modules/@nyaruka/flow-editor/build/manifest.json' %}"/>
+        <link href="{% static 'skin/node_modules/@nyaruka/flow-editor/build/static/css/main.39a3ede3.chunk.css' %}" type="text/css"
+          rel="stylesheet">
+        {% block styles %}{% endblock styles %}
+
+    </head>
+    <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <div id="app">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+          </span>
+    </div>
+        <script>
+          var app = new Vue({
+              el: '#app',
+              data: {
+                message: 'You loaded this page on ' + new Date().toLocaleString()
+              }
+            })
+        </script>
+
+        {% block main%}
+
+         {% endblock main%}
+
+        <script src="{% static 'skin/node_modules/jquery/dist/jquery.min.js' %}"></script>
+        <script src="{% static 'skin/node_modules/@nyaruka/flow-editor/build/static/js/3.85af9119.chunk.js' %}"></script>
+        <script src="{% static 'skin/node_modules/@nyaruka/flow-editor/build/static/js/main.afa28e47.chunk.js' %}"></script>
+        <script src="{% static 'skin/node_modules/@nyaruka/flow-editor/build/static/js/runtime-main.9c86048e.js' %}"></script>
+        <script src="{% static 'skin/node_modules/@nyaruka/flow-editor/build/static/js/2.cb52f5fd.chunk.js' %}"></script>
+        {% block scripts %}{% endblock scripts %}
+    </body>
+</html>

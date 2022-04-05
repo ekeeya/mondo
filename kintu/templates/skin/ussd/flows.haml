@@ -66,7 +66,7 @@
                           %span.badge.bg-danger Disabled
                 .col-md-3
                   %header.text-center
-                    %button#createFlowButton.btn.btn-primary.btn-block
+                    %button.createFlowButton.btn.btn-outline-info.btn-block
                       Create Flow
                   %table.table
                     %tr
@@ -117,7 +117,7 @@
         $('#id_short_code').select2({
           placeholder:"Select Shortcode(s) to trigger flow execution if any"
         });
-        $("#createFlowButton").click(function(){
-            $("#createFlowModal").modal('show')
-        });
+        $(document).on('click', 'button.createFlowButton', ()=>{
+          $("#createFlowModal").modal('show');
+        })
       });

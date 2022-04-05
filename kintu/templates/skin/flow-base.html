@@ -1,14 +1,49 @@
--extends 'skin/flow.html'
+-extends 'skin/base.html'
+  -block breadcrumb
+    %ol.breadcrumb
+      %li.breadcrumb-item USSD
+      %li.breadcrumb-item
+        %a{:href=>"{% url 'ussd_apps' %}"} Flows
+      %li.breadcrumb-item.active Flow
 
   -block main
-    #floweditor
+    .row
+      .col-md
+        %section.widget
+          %header
+            %h5
+              %span.mo-flow-merge{:style=>"font-size:30pt"}
+              %span{:style=>"font-size:16pt;margin-left:1em"} Virtual Banking (*221#)
+            .col-md-4{:style=>"margin-top:2em"}
+              %button.btn.btn-outline-info{:id=>"editFlow"}
+                %i.glyphicon.glyphicon-edit
+                &nbsp;&nbsp;Edit Flow
+            .widget-controls
+              %a{:data-widgste => "close", :href => "#", :title => "Close"}
+                %i.la.la-remove{:style=>"color:#DB4437"}
+          .widget-body
+            .widget-padding-md.border.rounded
+              #floweditor.card-body
 
     / -- Modal--
-
+    #editFlowModal.modal.fade{:aria-hidden => "true", :aria-labelledby => "editFlowModalLabel", :tabindex => "-1"}
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            %h5#editFlowModalLabel.modal-title Edit
+          .modal-body
+            %form
+          .modal-footer
+            %button.btn.btn-default{:data-dismiss => "modal", :type => "button"} Cancel
+            %button.btn.btn-primary{:type => "button"}
+              %span#editFlowButton.fi.flaticon-save{:style=>'color:#fff'}&nbsp;
+              Save
   -block scripts
     :javascript
       $(document).ready(function(){
-
+        $("#editFlow").click(function(){
+            $("#editFlowModal").modal('show')
+        });
         const url = window.location.href;
             const newUrl = new URL(url);
             const  uuid = newUrl.searchParams.get("uuid");
