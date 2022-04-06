@@ -1,62 +1,117 @@
 <template>
-  <vs-sidebar hidden-background :parent="$refs.parentSidebar" :reduce="reduce" :reduce-not-hover-expand="notExpand"  default-index="-1"  color="success" class="sidebarx" spacer v-model="active">
+  <vs-sidebar
+      absolute
+      hover-expand
+      spacer
+      background="dark"
+      textWhite
+      reduce
+      v-model="active"
+      open
+  >
+    <template #logo>
+      <vs-avatar  size="80px" src="https://randomuser.me/api/portraits/men/85.jpg"/>
+    </template>
+    <vs-sidebar-item id="home">
+      <template #icon>
+        <i class='bx bx-home'></i>
+      </template>
+      Home
+    </vs-sidebar-item>
+    <vs-sidebar-group>
+      <template #header>
+        <vs-sidebar-item arrow>
+          <template #icon>
+            <i class='bx bx-dialpad'></i>
+          </template>
+         USSD
+        </vs-sidebar-item>
+      </template>
 
-    <div class="header-sidebar" slot="header">
-      <vs-avatar  size="70px" src="https://randomuser.me/api/portraits/men/85.jpg"/>
-    </div>
-    <vs-sidebar-group open title="USSD">
-      <vs-sidebar-item index="1" icon="account_tree" >
+      <vs-sidebar-item id="flows">
+        <template #icon>
+          <i class='bx bx-network-chart'></i>
+        </template>
         Flows
       </vs-sidebar-item>
-      <vs-sidebar-item index="5" icon="phonelink_setup">
+      <vs-sidebar-item id="twitter">
+        <template #icon>
+          <i class='bx bx-plug' ></i>
+        </template>
         Aggregator APIs
       </vs-sidebar-item>
-
     </vs-sidebar-group>
-    <vs-sidebar-item index="4" icon="chat">
+    <vs-sidebar-item id="market">
+      <template #icon>
+        <i class='bx bx-chat'></i>
+      </template>
       SMS
     </vs-sidebar-item>
-    <vs-sidebar-group title="SMS GATEWAYS">
-      <vs-sidebar-item index="2.1" icon="all_inbox">
+    <vs-sidebar-group>
+      <template #header>
+        <vs-sidebar-item arrow>
+          <template #icon>
+            <i class='bx bxs-cog' ></i>
+          </template>
+          Gateway Configs
+        </vs-sidebar-item>
+      </template>
+
+      <vs-sidebar-item id="github">
+        <template #icon>
+          <i class='bx bxs-inbox' ></i>
+        </template>
         Kannel
       </vs-sidebar-item>
-      <vs-sidebar-item index="2.2" icon="nature_people">
+      <vs-sidebar-item id="codepen">
+        <template #icon>
+          <i class='bx bx-station'></i>
+        </template>
         Mbuni
       </vs-sidebar-item>
+
     </vs-sidebar-group>
-    <vs-sidebar-item index="4" icon="help">
-      Help
+    <vs-sidebar-item id="donate">
+      <template #icon>
+        <i class='bx bxs-donate-heart' ></i>
+      </template>
+      Donate
     </vs-sidebar-item>
-    <vs-divider icon="person" position="left">
-      User
-    </vs-divider>
-
-
-    <vs-sidebar-item index="6" icon="account_box">
+    <vs-sidebar-item id="chat">
+      <template #icon>
+        <i class='bx bx-user-check' ></i>
+      </template>
       Profile
     </vs-sidebar-item>
+    <template #footer>
+      <vs-row justify="space-between">
+        <vs-avatar ba badge-color="success" badge-position="top-right">
+          <i class='bx bx-bell' ></i>
+          <template #badge>
+            <span style="color:#ffff">28</span>
+          </template>
+        </vs-avatar>
 
-    <div class="footer-sidebar" slot="footer">
-      <vs-button icon="settings" color="primary" type="border"></vs-button>
-    </div>
-
+        <vs-avatar>
+          <img src="/avatars/avatar-5.png" alt="">
+        </vs-avatar>
+      </vs-row>
+    </template>
   </vs-sidebar>
 </template>
 <script>
+import menuItems from "@/components/navigation/sidebar/menuItems";
 export default {
   name: "SideBar",
   data: () => ({
     active:true,
     notExpand: false,
-    reduce: true
+    reduce: true,
+    menuItems:menuItems
   }),
 };
 </script>
 <style lang="stylus">
-#parentx
-  overflow hidden
-  height 98%
-  position relative
 
 .header-sidebar
   display flex
@@ -71,6 +126,7 @@ export default {
     width 100%
     > button
       margin-left 10px
+
 .footer-sidebar
   display flex
   align-items center

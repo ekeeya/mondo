@@ -11,12 +11,12 @@ import 'material-icons/iconfont/material-icons.css';
 import './index.css' // load tailwind css
 import 'flowbite';
 
+
 import colors from "../themeConfig";
 Vue.config.productionTip = false;
 
 Vue.use(Vuesax, {
-  theme: { colors:colors}
-
+  colors:colors
 });
 
 new Vue({

@@ -1,6 +1,8 @@
 <template>
 
-<div>bjnnskncknsdkjckjsdncksdncnksdnkcndsmnckn</div>
+<div class="mx-4">
+    This is the about page
+</div>
 </template>
 
 <script>
