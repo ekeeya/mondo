@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@nyaruka/flow-editor": "^1.17.1",
     "autoprefixer": "^9",
     "boxicons": "^2.1.2",
     "core-js": "^3.8.3",

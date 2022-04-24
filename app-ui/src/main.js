@@ -8,6 +8,8 @@ import Vuesax from "vuesax";
 import "vuesax/dist/vuesax.css"; //Vuesax styles
 import 'boxicons/css/boxicons.css';
 import 'material-icons/iconfont/material-icons.css';
+
+
 import './index.css' // load tailwind css
 import 'flowbite';
 

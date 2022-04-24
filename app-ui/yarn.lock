@@ -1042,6 +1042,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@nyaruka/flow-editor@^1.17.1":
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/@nyaruka/flow-editor/-/flow-editor-1.17.1.tgz#3b5720b572f43220710b68dfa11df1dda37f39ef"
+  integrity sha512-H8pyAaHiIrnpE5GSmSARWSnUKakGTp4M2YsjR9QR1liNUK/uShLpi6FxJbvnKICYN2ytrbTYmPK/JCpXrPLCAA==
+  dependencies:
+    react "^16.8.6"
+    react-dom "^16.8.6"
+
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
@@ -5075,7 +5083,7 @@ raw-body@2.4.3:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-dom@^16.0.0:
+react-dom@^16.0.0, react-dom@^16.8.6:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
   integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
@@ -5124,7 +5132,7 @@ react-router@^4.3.1:
     prop-types "^15.6.1"
     warning "^4.0.1"
 
-react@^16.0.0:
+react@^16.0.0, react@^16.8.6:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==

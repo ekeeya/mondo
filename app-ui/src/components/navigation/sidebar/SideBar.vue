@@ -1,114 +1,81 @@
 <template>
-  <vs-sidebar
-      absolute
-      hover-expand
-      spacer
-      background="dark"
-      textWhite
-      reduce
-      v-model="active"
-      open
-  >
-    <template #logo>
-      <vs-avatar  size="80px" src="https://randomuser.me/api/portraits/men/85.jpg"/>
-    </template>
-    <vs-sidebar-item id="home">
-      <template #icon>
-        <i class='bx bx-home'></i>
+  <div>
+    <nav-bar :showLeftToggle="showNavBarToggle" :isSidebarActive="activeSidebar" @showSidebar="toggleSideBar(true)"  @closeSidebar="toggleSideBar(false)" />
+    <vs-sidebar
+        absolute
+        hover-expand
+        spacer
+        reduce
+        v-model="active"
+        :open.sync="activeSidebar"
+    >
+      <template #logo>
+        <vs-avatar  size="80px" src="https://randomuser.me/api/portraits/men/85.jpg"/>
       </template>
-      Home
-    </vs-sidebar-item>
-    <vs-sidebar-group>
-      <template #header>
-        <vs-sidebar-item arrow>
+      <div :key="idx" v-for="(menu, idx) in menuItems">
+
+        <vs-sidebar-group v-if="menu.items" >
+          <template #header>
+            <vs-sidebar-item arrow>
+              <template #icon>
+                <i :class='`bx ${menu.icon}`'></i>
+              </template>
+              {{menu.header}}
+            </vs-sidebar-item>
+          </template>
+          <vs-sidebar-item :key="index" v-for="(item, index) in menu.items" :id="item.slug">
+            <template #icon>
+              <i :class='`bx ${item.icon}`'></i>
+            </template>
+            {{item.name}}
+          </vs-sidebar-item>
+        </vs-sidebar-group>
+        <vs-sidebar-item v-else :id="menu.slug">
           <template #icon>
-            <i class='bx bx-dialpad'></i>
+            <i :class='`bx ${menu.icon}`'></i>
           </template>
-         USSD
+          {{menu.header}}
         </vs-sidebar-item>
-      </template>
+      </div>
 
-      <vs-sidebar-item id="flows">
-        <template #icon>
-          <i class='bx bx-network-chart'></i>
-        </template>
-        Flows
-      </vs-sidebar-item>
-      <vs-sidebar-item id="twitter">
-        <template #icon>
-          <i class='bx bx-plug' ></i>
-        </template>
-        Aggregator APIs
-      </vs-sidebar-item>
-    </vs-sidebar-group>
-    <vs-sidebar-item id="market">
-      <template #icon>
-        <i class='bx bx-chat'></i>
-      </template>
-      SMS
-    </vs-sidebar-item>
-    <vs-sidebar-group>
-      <template #header>
-        <vs-sidebar-item arrow>
-          <template #icon>
-            <i class='bx bxs-cog' ></i>
-          </template>
-          Gateway Configs
-        </vs-sidebar-item>
-      </template>
+      <template #footer>
+        <vs-row justify="space-between">
+          <vs-avatar ba badge-color="success" badge-position="top-right">
+            <i class='bx bx-bell' ></i>
+            <template #badge>
+              <span style="color:#ffff">28</span>
+            </template>
+          </vs-avatar>
 
-      <vs-sidebar-item id="github">
-        <template #icon>
-          <i class='bx bxs-inbox' ></i>
-        </template>
-        Kannel
-      </vs-sidebar-item>
-      <vs-sidebar-item id="codepen">
-        <template #icon>
-          <i class='bx bx-station'></i>
-        </template>
-        Mbuni
-      </vs-sidebar-item>
-
-    </vs-sidebar-group>
-    <vs-sidebar-item id="donate">
-      <template #icon>
-        <i class='bx bxs-donate-heart' ></i>
+          <vs-avatar>
+            <img src="/avatars/avatar-5.png" alt="">
+          </vs-avatar>
+        </vs-row>
       </template>
-      Donate
-    </vs-sidebar-item>
-    <vs-sidebar-item id="chat">
-      <template #icon>
-        <i class='bx bx-user-check' ></i>
-      </template>
-      Profile
-    </vs-sidebar-item>
-    <template #footer>
-      <vs-row justify="space-between">
-        <vs-avatar ba badge-color="success" badge-position="top-right">
-          <i class='bx bx-bell' ></i>
-          <template #badge>
-            <span style="color:#ffff">28</span>
-          </template>
-        </vs-avatar>
-
-        <vs-avatar>
-          <img src="/avatars/avatar-5.png" alt="">
-        </vs-avatar>
-      </vs-row>
-    </template>
-  </vs-sidebar>
+    </vs-sidebar>
+  </div>
 </template>
 <script>
 import menuItems from "@/components/navigation/sidebar/menuItems";
+import NavBar from "@/components/navigation/navbar/NavBar";
 export default {
   name: "SideBar",
+  components:{
+    NavBar
+  },
   data: () => ({
     active:true,
     notExpand: false,
     reduce: true,
-    menuItems:menuItems
+    menuItems:menuItems,
+    activeSidebar: true,
+    showNavBarToggle:false
   }),
+  methods:{
+    toggleSideBar(value){
+      this.activeSidebar =  value;
+    }
+  }
 };
 </script>
 <style lang="stylus">

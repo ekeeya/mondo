@@ -1,43 +1,63 @@
 export default [
     {
-        header:"USSD",
-        items:[
+        header: "Home",
+        slug: 'home',
+        url: '',
+        icon: 'bx-home'
+    },
+    {
+        header: "USSD",
+        icon: 'bx-dialpad',
+        items: [
             {
-                url:'/',
-                name:'Flows',
-                icon:'account_tree'
+                url: '/',
+                name: 'Flows',
+                slug: 'flows',
+                icon: 'bx-network-chart'
             },
             {
-                url:'about',
-                name:'Aggregator APIs',
-                icon:'phonelink_setup'
+                url: 'about',
+                slug: 'aggregator_apis',
+                name: 'Aggregator APIs',
+                icon: 'bx-plug'
             }
         ]
     },
     {
-        header:"SMS",
-        url:'',
-        icon:'chat'
+        header: "SMS",
+        url: '',
+        slug: 'sms',
+        icon: 'bx-chat'
     },
     {
-        header:"SMS GATEWAYS",
-        items:[
+        header: "SMS GATEWAYS",
+        icon: 'bxs-cog',
+        items: [
             {
-                url:'/',
-                name:'Kannel',
-                icon:'all_inbox'
+                url: '/',
+                name: 'Kannel',
+                slug: 'kannel',
+                icon: 'bxs-inbox'
             },
             {
-                url:'about',
-                name:'Mbuni',
-                icon:'nature_people'
+                url: 'about',
+                name: 'Mbuni',
+                slug: 'mbuni',
+                icon: 'bx-station'
             }
         ]
     },
     {
-        header:"Help",
-        url:'',
-        icon:'help'
+        header: "Donate",
+        url: '',
+        slug: 'donate',
+        icon: 'bxs-donate-heart'
+    },
+    {
+        header: "Help",
+        url: '',
+        slug: 'help',
+        icon: 'bx-help-circle'
     },
 
 ]

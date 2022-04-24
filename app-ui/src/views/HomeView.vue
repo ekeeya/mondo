@@ -1,5 +1,7 @@
 <template>
- <p></p>
+  <div class="child ">
+      This will do it
+  </div>
 </template>
 <script>
 export default {
