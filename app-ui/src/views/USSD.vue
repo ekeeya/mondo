@@ -40,7 +40,6 @@ export default {
         'split_by_groups',
         'split_by_scheme'
       ],
-
       excludeOperators: [
         'has_beginning',
         'has_text',
@@ -110,7 +109,6 @@ html input {
 }
 
 html {
-
 
   --font-family: 'Roboto', Helvetica, Arial, sans-serif;
   --primary-rgb: 35, 135, 202;
@@ -219,5 +217,8 @@ temba-select:focus {
   margin-top: 28px;
   margin-bottom: 28px;
   margin-left: -13px;
+}
+.Action_body__RtQCZ Action_send_msg__1QYPk{
+  width:auto !important
 }
 </style>

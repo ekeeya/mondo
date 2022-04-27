@@ -17,6 +17,12 @@ const routes = [
       import( "../views/AboutView.vue"),
   },
   {
+    path: "/flows",
+    name: "flow-list",
+    component: () =>
+        import( "../views/apps/flows/FlowList"),
+  },
+  {
     path: "/flow/:uuid",
     name: "ussd-flow",
     component: () =>

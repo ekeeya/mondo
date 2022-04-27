@@ -10,7 +10,7 @@ export default [
         icon: 'bx-dialpad',
         items: [
             {
-                url: '/',
+                url: '/flows',
                 name: 'Flows',
                 slug: 'flows',
                 icon: 'bx-network-chart'
@@ -25,7 +25,7 @@ export default [
     },
     {
         header: "SMS",
-        url: '',
+        url: '/sms',
         slug: 'sms',
         icon: 'bx-chat'
     },
@@ -34,17 +34,17 @@ export default [
         icon: 'bxs-cog',
         items: [
             {
-                url: '/',
+                url: '/gateways/kannel',
                 name: 'Kannel',
                 slug: 'kannel',
                 icon: 'bxs-inbox'
-            },
+            }/*,
             {
                 url: 'about',
                 name: 'Mbuni',
                 slug: 'mbuni',
                 icon: 'bx-station'
-            }
+            }*/
         ]
     },
     {

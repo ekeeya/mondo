@@ -20,21 +20,21 @@
               <template #icon>
                 <i :class='`bx ${menu.icon}`'></i>
               </template>
-              {{menu.header}}
+              <span v-if="menu.items">{{menu.header}}</span>
             </vs-sidebar-item>
           </template>
-          <vs-sidebar-item :key="index" v-for="(item, index) in menu.items" :id="item.slug">
+          <vs-sidebar-item  :key="index" v-for="(item, index) in menu.items" :id="item.slug">
             <template #icon>
               <i :class='`bx ${item.icon}`'></i>
             </template>
-            {{item.name}}
+            <a @click="navigate(item.url)" href="javascript:void(0)">{{item.name}}</a>
           </vs-sidebar-item>
         </vs-sidebar-group>
         <vs-sidebar-item v-else :id="menu.slug">
           <template #icon>
             <i :class='`bx ${menu.icon}`'></i>
           </template>
-          {{menu.header}}
+          <a @click="navigate(menu.url)" href="javascript:void(0)">{{menu.header}} </a>
         </vs-sidebar-item>
       </div>
 
@@ -74,6 +74,10 @@ export default {
   methods:{
     toggleSideBar(value){
       this.activeSidebar =  value;
+    },
+    navigate(path){
+      console.log(path)
+      this.$router.push({path});
     }
   }
 };

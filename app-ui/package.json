@@ -9,17 +9,24 @@
   },
   "dependencies": {
     "@nyaruka/flow-editor": "^1.17.1",
+    "ag-grid-community": "^27.2.1",
+    "ag-grid-vue": "^27.2.1",
     "autoprefixer": "^9",
     "boxicons": "^2.1.2",
     "core-js": "^3.8.3",
     "flowbite": "^1.4.1",
     "material-icons": "^1.10.8",
     "postcss": "^7",
+    "prismjs": "^1.28.0",
     "stylus": "^0.57.0",
     "stylus-loader": "^6.2.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.14",
+    "vue-class-component": "^7.2.6",
+    "vue-feather-icons": "^5.1.0",
+    "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.1",
+    "vue-select": "^3.18.3",
     "vuesax": "^4.0.1-alpha.25",
     "vuex": "^3.6.2"
   },
@@ -35,8 +42,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.5.0",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
     "vue-template-compiler": "^2.6.14"
   }
 }
