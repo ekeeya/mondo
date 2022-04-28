@@ -22,4 +22,6 @@ urlpatterns = [
     path('completion/', CompletionView.as_view(), name='completion'),
     path('revisions/<str:uuid>/<int:revision_id>', RevisionsView.as_view()),
     path('revisions/<str:uuid>/', Revisions.as_view()),
+    path('revisions/', Revisions.as_view()),
+    path('revisions1/', Revisions.as_view()),
 ]

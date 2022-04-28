@@ -13,7 +13,6 @@
           </div>
         </template>
       <div class="flex flex-wrap items-center" >
-
         <ag-grid-vue
             ref="agGridTable"
             style="width: 100vh; height: 200px"

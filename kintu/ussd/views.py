@@ -22,16 +22,19 @@ from django.views.generic import TemplateView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Flow
+import logging
 
 from datetime import datetime
 
 from .forms import CreateFlowForm
 
+logger =  logging.getLogger('main')
 
 class USSDApplicationsListView(TemplateView):
     template_name = "skin/ussd/flows.haml"
 
     def get(self, request, *args, **kwargs):
+        logger.info("THis works")
         form = CreateFlowForm()
         context = dict(form=form)
         return render(request, self.template_name, context)
@@ -232,6 +235,12 @@ class Revisions(APIView):
         flow = None
         if 'uuid' in kwargs:
             uuid = kwargs['uuid']
+            revision_list = [{"user": {"email": "chancerton@nyaruka.com", "name": "Chancellor von Frankenbean"},
+                              "created_on": "2021-09-08T20:07:30.305Z", "id": 1, "version": "13.0.0", "revision": 1}]
+            revisions = dict(
+                results=revision_list
+            )
+        else:
             revision_list = [{"user": {"email": "chancerton@nyaruka.com", "name": "Chancellor von Frankenbean"},
                               "created_on": "2021-09-08T20:07:30.305Z", "id": 1, "version": "13.0.0", "revision": 1}]
             revisions = dict(

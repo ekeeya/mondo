@@ -142,7 +142,13 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_PLAN = 'f' # free plan for now
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8080',
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
 ]
-from .local import *
+from .log_config import *

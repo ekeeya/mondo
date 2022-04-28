@@ -8,6 +8,8 @@ django = "*"
 django-hamlpy = "*"
 djangorestframework = "*"
 django-countries = "*"
+python-json-logger = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

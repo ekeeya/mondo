@@ -43,3 +43,4 @@ class AuthSignature(models.Model):
 
     class Meta:
         abstract = True
+
