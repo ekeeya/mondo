@@ -203,15 +203,15 @@ coming soon...
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Project Analysis and planning
+- [ ] Project Design
+- [ ] Database design
+    - [ ] modeling
+    - [ ] normalization etc
+- [ ] Code writing
+- [ ] Testing
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ekeeya/mondo/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -247,7 +247,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@keldoticom](https://twitter.com/keldoticom) - email@example.com
+Your Name - [@keldoticom](https://twitter.com/keldoticom) - ekeeya@oddjobs.tech
 
 Project Website: [Here](https://mondo.oddjobs.tech)
 
