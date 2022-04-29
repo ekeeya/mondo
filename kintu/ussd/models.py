@@ -20,6 +20,19 @@ class Flow(AuthSignature):
         max_length=70,
         help_text="The country this organization should map results for."
     )
+
+    version_number = models.CharField(
+        max_length=5,
+        default='13.1')
+
+    nodes = models.TextField(
+        null=True,
+        blank=True
+    )
+    base_language = models.CharField(
+        max_length=5,
+        default='eng')
+
     is_active = models.BooleanField(
         default=True
     )

@@ -1,15 +1,16 @@
 """
 Copyright (C) 2021 Digital Solutions
 
-This software has been initially thought through and developed by Keeya Emmanuel <ekeeya@ds.co.ug> for digital solutions
+This software has been initially thought through and developed by Keeya Emmanuel <ekeeya@oddjobs.tech> for Odd Jobs
+tech ltd
 
-Part of this software is free fro usage on github.
+Part of this software is free for usage on github.
 Purchase your licence to get the full power of this software.
 contact us on
 
-dev@mondo.io
-sale@mondo.io
-ekeeya@mondo.io
+dev@oddjobs.tech
+sale@oddjobs.tech
+ekeeya@oddjobs.tech
 
 """
 import ast
@@ -21,14 +22,14 @@ from django.utils import timezone
 from django.views.generic import TemplateView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import Flow
 import logging
 
 from datetime import datetime
 
 from .forms import CreateFlowForm
 
-logger =  logging.getLogger('main')
+logger = logging.getLogger('main')
+
 
 class USSDApplicationsListView(TemplateView):
     template_name = "skin/ussd/flows.haml"
@@ -73,6 +74,7 @@ class ActivityView(APIView):
 
 class LanguagesView(APIView):
     def get(self, request, *args, **kwargs):
+
         data = [
             {
                 "iso": 'eng',
