@@ -15,7 +15,7 @@
     <img src="kintu/static/landing/assets/img/favicon/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Easy USSD</h3>
+<h3 align="center">Easy USSD with intuitive flows</h3>
 
   <p align="center">
     An awesome way to manage your USSD menus!
