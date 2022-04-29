@@ -20,7 +20,7 @@
   <p align="center">
     An awesome way to manage your USSD menus!
     <br>
-    What is you do not need a technical person to change your USSD menus?
+    What if you don't need a technical person to change your USSD menus?
     <br />
     <a href="https://mondo.oddjobs/docs"><strong>Explore the docs »</strong></a>
     <br />
