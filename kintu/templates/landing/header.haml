@@ -3,14 +3,14 @@
     %nav#navbar-main.navbar.navbar-main.navbar-expand-lg.navbar-theme-primary.headroom.navbar-dark{:aria-label => "Primary navigation"}
       .container.position-relative
         %a.navbar-brand.me-lg-5{:href => "./index.html"}
-          %img.navbar-brand-dark{:alt => "Logo light", :src => "{% static 'landing/assets/img/brand/light.svg' %}"}/
-          %img.navbar-brand-light{:alt => "Logo dark", :src => "{% static 'landing/assets/img/brand/dark.svg' %}"}/
+          %img.navbar-brand-dark{:alt => "Logo light", :style =>"width:70px;height:70px", :src => "{% static  'landing/assets/img/cheetah.png' %}"}/
+          %img.navbar-brand-light{:alt => "Logo dark", :src => "{% static 'landing/assets/img/cheetah.png' %}"}/
         #navbar_global.navbar-collapse.collapse.me-auto
           .navbar-collapse-header
             .row
               .col-6.collapse-brand
                 %a{:href => "./index.html"}
-                  %img{:alt => "Themesberg logo", :src => "{% static 'landing/assets/img/brand/dark.svg' %}"}/
+                  %img{:alt => "logo", :src => "{% static 'landing/assets/img/cheetah.png' %}"}/
               .col-6.collapse-close
                 %a.fas.fa-times{:aria-controls => "navbar_global", :aria-expanded => "false", :aria-label => "Toggle navigation", :data-bs-target => "#navbar_global", :data-bs-toggle => "collapse", :href => "#navbar_global", :title => "close"}
           %ul.navbar-nav.navbar-nav-hover.align-items-lg-center
@@ -24,16 +24,17 @@
                     %h6.d-block.mb-3.text-primary USSD
                     %ul.list-style-none.mb-4
                       %li.mb-2.megamenu-item
-                        %a.megamenu-link{:href => "https://demo.themesberg.com/pixel-pro/v5/html/dashboard/account.html", :target => "_blank"} Easy create USSD Applications
+                        %a.megamenu-link{:href => "javascript:void(0)", :target => "_blank"} Easy create USSD
+                        Applications
                     %h6.d-block.mb-3.text-primary APIs
                     %ul.list-style-none
                       %li.mb-2.megamenu-item
-                        %a.megamenu-link{:href => "https://demo.themesberg.com/pixel-pro/v5/html/dashboard/single-message.html", :target => "_blank"} Seamless Intergration
+                        %a.megamenu-link{:href => "javascript:void(0)", :target => "_blank"} Seamless Intergration
                   .col-6
                     %h6.d-block.mb-3.text-primary SMS
                     %ul.list-style-none.mb-4
                       %li.mb-2.megamenu-item
-                        %a.megamenu-link{:href => "https://demo.themesberg.com/pixel-pro/v5/html/dashboard/messages.html", :target => "_blank"} Personalized SMS
+                        %a.megamenu-link{:href => "javascript:void(0)", :target => "_blank"} Personalized SMS
             %li.nav-item.dropdown
               %a#supportDropdown.nav-link.dropdown-toggle{:aria-expanded => "false", :data-bs-toggle => "dropdown", :href => "#"}
                 Support
@@ -41,7 +42,7 @@
               .dropdown-menu.dropdown-menu-lg{:aria-labelledby => "supportDropdown"}
                 .col-auto.px-0
                   .list-group.list-group-flush
-                    %a.list-group-item.list-group-item-action.d-flex.align-items-center.p-0.py-3.px-lg-4{:href => "https://themesberg.com/docs/bootstrap-5/pixel/getting-started/quick-start/", :target => "_blank"}
+                    %a.list-group-item.list-group-item-action.d-flex.align-items-center.p-0.py-3.px-lg-4{:href => "javascript:void(0)", :target => "_blank"}
                       %span.icon.icon-sm
                         %span.fas.fa-file-alt
                       .ms-4
@@ -49,17 +50,17 @@
                           Documentation
                           %span.badge.badge-sm.badge-secondary.ms-2 v3.1
                         %span.small Examples and guides
-                    %a.list-group-item.list-group-item-action.d-flex.align-items-center.p-0.py-3.px-lg-4{:href => "https://github.com/themesberg/pixel-bootstrap-ui-kit/issues", :target => "_blank"}
+                    %a.list-group-item.list-group-item-action.d-flex.align-items-center.p-0.py-3.px-lg-4{:href => "javascript:void(0)", :target => "_blank"}
                       %span.icon.icon-sm
                         %span.fas.fa-microphone-alt
                       .ms-4
                         %span.d-block.font-small.fw-bold.mb-0 Support
                         %span.small Need help? Ask us!
         .d-flex.align-items-center
-          %a.btn.btn-outline-gray-100.d-none.d-lg-inline.me-md-3{:href => "javascript:void(0)", :target => "_blank"}
+          %a.btn.btn-outline-gray-100.d-none.d-lg-inline.me-md-3{:href => "javascript:void(0)"}
             %span.fas.fa-book.me-2
             Docs
-          %a.btn.btn-tertiary{:href => "javascript:void(0)", :target => "_blank"}
+          %a.btn.btn-tertiary{:href => "https://github.com/ekeeya/mondo", :target => "_blank"}
             %i.fas.fa-cloud-download-alt.me-2
             Download
           %button.navbar-toggler.ms-2{:aria-controls => "navbar_global", :aria-expanded => "false", :aria-label => "Toggle navigation", :data-bs-target => "#navbar_global", :data-bs-toggle => "collapse", :type => "button"}

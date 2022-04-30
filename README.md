@@ -81,9 +81,9 @@ making Items on the menu do other things in the background, for example link to 
 data to a database,send sms, you name it.
 
 Do not get us wrong, we have seen some attempts to solve this issue but most of the solutions still help experienced 
-developers some use [yaml](https://yaml.org/) files, (yeah, I bet you know what yaml is if you do, congs! ). 
-Basically our solution will eliminate a developer completely.
-Let us know if you have seen any similar solutions so we do not waste time re-inventing the wheel.
+developers some use [yaml](https://yaml.org/) files, (yeah, I bet you know what yaml is,.. if you do, congs! ). 
+Basically our solution will eliminate a developer completely at when it comes to menus.
+Let us know if you have seen any similar solutions, so we do not waste time re-inventing the wheel.
 
 #### What is USSD?
 The [wikipedia](https://en.wikipedia.org/wiki/Unstructured_Supplementary_Service_Data) definition of USSD is; 
@@ -138,7 +138,7 @@ handlers so that we do not have a problem with parameter nomenclature or miss-ou
 gateway.
 
 I know this sounds technical but think of it as a deployment step that is obviously done by a technical person. The 
-only catch is after all this, you will have the means to alter your USSD flows as you like even if you are not 
+only catch is, after all this, you will have the means to alter your USSD flows as you like even if you are not that
 technical.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -263,17 +263,14 @@ coming soon
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/ekeeya/mondo//graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/ekeeya/mondo//network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/ekeeya/mondo//stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/ekeeya/mondo/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555

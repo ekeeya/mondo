@@ -18,8 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("site/", include("kintu.landing.urls")),
-    path('', include("kintu.access.urls")),
+    path("", include("kintu.landing.urls")),
+    path('app', include("kintu.access.urls")),
     path('ussd/', include('kintu.ussd.urls')),
     path('api/', include('kintu.api.urls'))
 ]

@@ -7,7 +7,7 @@
 .envrc
 .direnv
 .commit
-
+*.log
 node_modules
 sitestatic
 staticfiles
