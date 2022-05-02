@@ -82,7 +82,7 @@ data to a database,send sms, you name it.
 
 Do not get us wrong, we have seen some attempts to solve this issue but most of the solutions still help experienced 
 developers some use [yaml](https://yaml.org/) files, (yeah, I bet you know what yaml is,.. if you do, congs! ). 
-Basically our solution will eliminate a developer completely at when it comes to menus.
+Basically, our solution will eliminate a developer completely when it comes to menus.
 Let us know if you have seen any similar solutions, so we do not waste time re-inventing the wheel.
 
 #### What is USSD?
@@ -150,8 +150,7 @@ technical.
 This solution is developed using the following technologies;
 
 * [Vue.js](https://vuejs.org/) for the user interface.
-* [Django](https://docs.djangoproject.com/)
-* [Django Restframework](https://www.django-rest-framework.org/)
+* [Spring boot](https://spring.io/projects/spring-boot)
 * [Postgresql ](https://www.postgresql.org/)
 * [Nyaruka Flow editor](https://www.npmjs.com/package/@nyaruka/flow-editor)
 
