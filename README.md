@@ -202,12 +202,33 @@ coming soon...
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Project Analysis and planning
-- [ ] Project Design
-- [ ] Database design
-    - [ ] modeling
-    - [ ] normalization etc
-- [ ] Code writing
+- [ ] USSD Menu Management
+    - [ ] UI flow editor <br>
+      Cloning and customizing @nyaruka/flow editor<br>
+        - [ ] Change wording on canvas before any nodes are created to <br> 
+        - [ ] Modifying styling such that the width of the inner div inside a node is set to ```auto```.
+        - [ ] Fix node character count to 160-182 (USSD standard)
+        - [ ] Remove all that we do not need
+    - [ ] Flow execution engine<br>
+      Since the UI flow translates into JSON, we need an engine that traverses the nodes <br>
+        - [ ] Traverse and execute Send USSD Message node
+        - [ ] Traverse and execute Wait for response node"
+        - [ ] Traverse and execute Send SMS node
+        - [ ] Traverse and execute Send mail node
+        - [ ] Traverse and execute Call webhook node
+        - [ ] Traverse and execute Enter another flow node
+        - [ ] Implement response Validators
+    - [ ] USSD Flow APIs
+       - [ ] Create, update, delete a flow
+       - [ ] Export and import a flow in JSON format
+    - [ ] USSD Gateway(Aggregators) 
+       - [ ] Register, update, delete Aggregator
+       - [ ] Configure Handlers
+    - [ ] SMS Gateways
+       - [ ] In-app kannel config and control
+    - [ ] User Interface
+       - [ ] Use Vue to connect to the API end points
+    - [ ] Database
 - [ ] Testing
 
 See the [open issues](https://github.com/ekeeya/mondo/issues) for a full list of proposed features (and known issues).
@@ -246,7 +267,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@keldoticom](https://twitter.com/keldoticom) - ekeeya@oddjobs.tech
+Keeya Emmanuel Lubowa - [@keldoticom](https://twitter.com/keldoticom) - ekeeya@oddjobs.tech
 
 Project Website: [Here](https://mondo.oddjobs.tech)
 
