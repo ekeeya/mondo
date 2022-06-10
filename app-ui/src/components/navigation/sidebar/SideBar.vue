@@ -1,8 +1,9 @@
 <template>
   <div>
-    <nav-bar :showLeftToggle="showNavBarToggle" :isSidebarActive="activeSidebar" @showSidebar="toggleSideBar(true)"  @closeSidebar="toggleSideBar(false)" />
+    <nav-bar  :showLeftToggle="showNavBarToggle" :isSidebarActive="activeSidebar" @showSidebar="toggleSideBar(true)"  @closeSidebar="toggleSideBar(false)" />
     <vs-sidebar
         absolute
+        square
         hover-expand
         spacer
         reduce
@@ -53,6 +54,7 @@
         </vs-row>
       </template>
     </vs-sidebar>
+
   </div>
 </template>
 <script>
@@ -61,7 +63,7 @@ import NavBar from "@/components/navigation/navbar/NavBar";
 export default {
   name: "SideBar",
   components:{
-    NavBar
+    NavBar,
   },
   data: () => ({
     active:true,

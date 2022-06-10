@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --transition: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-ms: 90%;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+div .header-icon-container{
+    width: 35px;
+    height: 35px;
+    background: #fdfcff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div .header-icon-container:hover{
+    background: #d0e2f0;
+    transition: var(--transition);
+}
+.header-icon{
+    font-size: 25px;
+    color:var(--color-bg);
+}
+.header-icon:hover{
+    color:var(--color-bg-variant);
+}
+div.title-text{
+    text-decoration: underline;
+}
+div .header{
+    border-bottom-width: thin;
+}
+.ag-grid-custom{
+    height: 50vh;
+
+}
+.max-width {
+    width: 70vw !important;
+    max-height: 94vh;
+}
+.breath{
+    transition: var(--transition)
+}
+.breath:hover{
+    transition: var(--transition);
+    margin-top: 5px;
+}

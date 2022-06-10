@@ -1,5 +1,5 @@
 <template>
-  <vs-navbar shadow square center-collapsed v-model="active">
+  <vs-navbar fixed shadow square center-collapsed v-model="active">
     <template v-if="showLeftToggle" #left>
       <vs-button @click="isSidebarActiveLocal = !isSidebarActiveLocal" flat icon>
         <i class='bx bx-menu'></i>
@@ -21,10 +21,12 @@
       <vs-button dark
                  ><i class="bx bxl-github" style="font-size: 16pt"></i>&nbsp;GitHub</vs-button>
     </template>
+
   </vs-navbar>
 </template>
 
 <script>
+
 export default {
   name: "NavBar",
   props:{
